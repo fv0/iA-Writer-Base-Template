@@ -28,13 +28,7 @@ html {
 /* Responsive adjustments */
 
 body {
-  max-width: var(--lineLength);
-}
-
-@media screen and (min-width: 1080px) {
-  body {
-    max-width: 754px;
-  }
+  max-width: 750px;
 }
 
 html {
@@ -71,12 +65,12 @@ figure,
 blockquote,
 pre,
 table {
-  margin: calc((30 / 18) * 1em) auto 0;
+  margin: var(--l-1) auto 0;
 }
 
 /* Override vertical margin between headers and block-level elements */
-:-webkit-any(h3, h4, h5) + :-webkit-any(p, ol, ul, dl, figure, blockquote, pre, table),
-:-webkit-any(h1, h2, h3, h4, h5) + h6 + *,
+:matches(h3, h4, h5) + :matches(p, ol, ul, dl, figure, blockquote, pre, table),
+:matches(h1, h2, h3, h4, h5) + h6 + *,
 hr + h6 {
   margin-top: 0;
 }

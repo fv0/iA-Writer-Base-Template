@@ -1,8 +1,3 @@
-body > h1:first-child {
-  margin-top: 0; /* Controlled via body padding-top */
-}
-
-/* Emphasis */
 h1,
 h2,
 h3,
@@ -22,37 +17,34 @@ h6 {
 /* Headings */
 
 h1 {
-  margin-top: calc((60 / 23) * 1em); /* 60px @23px */
-  margin-bottom: calc((60 / 23) * 1em); /* 60px @23px */
-  font-size: calc((23 / 18) * 1em); /* 1.2778em = 23px @ font-size: 18px */
-  line-height: calc(30 / 23); /* 1.304 = 30px @ font-size: 23px */
-  letter-spacing: 0.5px;
+  --marginLinesTop: var(--l-2);
+  --marginLinesBottom: var(--l-1);
+
+  font-size: var(--fontSizeH1);
+  line-height: var(--lineHeightH1);
+  margin-top: calc((var(--marginLinesTop) - var(--fontSizeH1)) + var(--marginLinesTop));
+  margin-bottom: calc((var(--marginLinesBottom) - var(--fontSizeH1)) + var(--marginLinesBottom));
 }
 
 h2 {
-  margin-top: calc((60 / 21) * 1em); /* 60px @21px */
-  margin-bottom: calc((30 / 18) * 1em); /* 30px @21px */
-  font-size: calc((21 / 18) * 1em); /* 1.1667em = 21px @ font-size: 18px */
-  line-height: calc(30 / 21); /* 1.4286 = 30px @ font-size: 21px */
+  --marginLinesTop: var(--l-1);
+  --marginLinesBottom: var(--l-1);
+
+  margin-top: calc((var(--marginLinesTop) - var(--fontSizeH2)) + var(--marginLinesTop));
+  margin-bottom: calc((var(--marginLinesBottom) - var(--fontSizeH2)) + var(--marginLinesBottom));
+  font-size: var(--fontSizeH2);
+  line-height: var(--lineHeightH2);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  margin-top: calc((30 / 18) * 1em);
-  font-size: 1em;
-}
+  --marginLinesTop: var(--l-1);
 
-h3,
-h4,
-h5 {
-  margin-bottom: 0;
-}
-
-h3,
-h4 {
-  line-height: calc(30 / 18); /* 1.6667 = 30px @ font-size: 18px */
+  margin-top: calc((var(--marginLinesTop) - var(--fontSizeHeading)) + var(--marginLinesTop));
+  font-size: var(--fontSizeHeading);
+  line-height: var(--lineHeightBase);
 }
 
 h4 {
@@ -66,48 +58,33 @@ h6 {
   text-transform: lowercase;
 }
 
-/* Display h6 as run-in: see core.css */
-
 /* Subheading adjustments */
 
-h1 + h1 {
-  margin-top: calc((45 / 23) * -1em);
-}
-
-h1 + h2 {
-  margin-top: calc((45 / 21) * -1em);
-}
-
-h2 + h1 {
-  margin-top: calc((15 / 23) * -1em);
-}
-
+h1 + h1,
+h1 + h2,
+h2 + h1,
 h2 + h2 {
-  margin-top: calc((15 / 21) * -1em);
+  --marginLinesTop: var(--l-1);
 }
 
-:-webkit-any(h1, h2, h3, h4, h5, h6) + :-webkit-any(h3, h4, h5, h6),
-body > h6:first-child {
+:matches(h1, h2, h3, h4, h5, h6) + :matches(h3, h4, h5, h6) {
   margin-top: 0;
 }
 
-/* Display h6 as run-in by default when followed by p
-   (h6 is no longer run-in if content is greater than one line long. Display can break if consecutive h6s are used before a <1 line p)
-   Note: Specced ways to do this display:run-in and :has() are not implemented at time of writing */
+/* Show h6 heading inline with following paragraph text */
 h6 {
-  float: left;
-  margin: 0 0.5em 0 0; /* 9px @ font-size: 18px */
+  display: inline-block;
+  margin: var(--l-half) var(--l-eigth) 0 0;
 }
 
-  /* Clear all siblings after floated h6… */
-h6 ~ * {
-  clear: both;
-}
-
-  /* …except immediately following paragraph */
 h6 + p {
-  clear: none;
+  display: inline;
 }
+
+h6 ~ * {
+  display: inherit;
+}
+
 
 /* Automatic Heading Numbering */
 

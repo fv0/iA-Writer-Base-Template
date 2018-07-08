@@ -1,27 +1,53 @@
 /* Smart Table ToolTips */
 
 .tooltip {
-    position: relative;
+  position: relative;
 }
 
 table .tooltip:after {
-    font-size: 10px;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
-    border-radius: 2px;
-    top: calc(50% - 10px);
-    left: 0%;
-    content: attr(id);
-    padding: 2px 4px;
-    position: absolute;
-    z-index: 98;
-    -webkit-user-select: none;
-    user-select: none;
+  content: attr(id);
+  font-size: var(--fontSizeSmall);
+  font-weight: bold;
+  background: var(--colorBackground);
+  border: var(--1px) solid var(--colorBorder);
+  border-bottom-width: 2px;
+  position: absolute;
+  top: 50%;
+  right: var(--l-quarter);
+  padding: 0 var(--4px);
+  transform: translateX(4px) translateY(-50%);
+  z-index: 1;
+  opacity: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.15s ease;
 }
 
 table:hover .tooltip:after {
-    /* Tooltips are always visible, and use transparent background and text color unless table is hovered because WebKit has a bug where table caption jumps around if table cells get a new abolutely positioned element inside. */
-    color: #fff;
-    background-color: #000;
+  opacity: 1;
+  transform: translateX(0) translateY(-50%);
+}
+
+table {
+  font-size: var(--fontSizeSmall);
+  border-collapse: collapse;
+  border: var(--1px) solid var(--colorBorder);
+}
+
+thead {
+  border-bottom: 3px solid var(--colorBorder);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--colorBackgroundCode);
+}
+
+td,
+th {
+  padding: var(--l-quarter);
+  vertical-align: top;
+}
+
+:matches(td, th):not(:last-child) {
+  border-right: var(--1px) solid var(--colorBorder);
 }

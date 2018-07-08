@@ -89,23 +89,26 @@ dd {
 }
 
 /* Remove vertical margins on nested lists */
-:-webkit-any(li, dt, dd, th, td) > :-webkit-any(ul, ol, dl) {
+:matches(li, dt, dd, th, td) > :matches(ul, ol, dl) {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* Override vertical margin above paragraph list items */
-:-webkit-any(li) > :-webkit-any(p, pre, figure, img) {
-    margin-top: 0;
+li > :matches(p, pre, figure, img) {
+  margin-top: var(--l-half);
+}
+
+li > p:first-child {
+  margin-top: 0;
 }
 
 /* Use 500 not 700 for code that inherits bold. This is supplimented for titles etc per template  */
-:-webkit-any(strong, bold, th) :-webkit-any(code, samp, kbd) {
+:matches(strong, bold, th) :matches(code, samp, kbd) {
   font-weight: 500;
 }
 
 /* Prevent code line-height increasing heading line-height */
-:-webkit-any(h1, h2, h3, h4, h5, h6) > code, kbd {
+:matches(h1, h2, h3, h4, h5, h6) > code, kbd {
   line-height: normal;
 }
 
@@ -113,7 +116,7 @@ dd {
 
 /* Center Headings
    Center h1-h5 headings, via the Centered Headings setting */
-.center-headings :-webkit-any(h1, h2, h3, h4, h5) {
+.center-headings :matches(h1, h2, h3, h4, h5) {
   text-align: center;
 }
 

@@ -1,25 +1,11 @@
 blockquote {
-  margin-left: calc((16 / 18) * -1em); /* 0.8889em = 16px when font-size: 18px */
-  margin-right: calc((16 / 18) * -1em); /* 0.8889em = 16px when font-size: 18px */
-  padding-left: calc((40 / 18) * 1em); /* 2.2222em = 40px when font-size: 18px */
-  padding-right: calc((40 / 18) * 1em); /* 2.2222em = 40px when font-size: 18px */
+  border-left: var(--3px) solid var(--colorBorder);
+  padding-left: var(--l-half);
+  margin-right: var(--l-1);
   font-style: italic;
 }
 
-blockquote em strong,
-blockquote strong em {
-  font-weight: 700;
-}
-
-/* Unify space above initial heading in blockquotes (based on 31px line-height) */
-blockquote > :-webkit-any(h1, h2, h3, h4, h5):first-child {
-  margin-top: calc((21 / 1080) * 100%); /* 20px when width: 1080px */
-  padding-top: calc((10 / 1080) * 100%);/* 10px when width: 1080px */
-}
-
-@media screen and (min-width: 1080px) {
-  blockquote > :-webkit-any(h1, h2, h3, h4, h5):first-child {
-    margin-top: 21px;
-    padding-top: 10px;
-  }
+/* Unify space above initial heading in blockquotes */
+blockquote > :matches(h1, h2, h3, h4, h5):first-child {
+  margin-top: 0;
 }

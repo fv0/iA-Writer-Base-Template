@@ -1,21 +1,31 @@
-hr {
-  clear: both;
-  margin: 3rem auto 3rem; /* Extra-large for visibility in mini-map (<100px wide) */
-  border: 0;
-  border-bottom: var(--1px) solid var(--colorBorder);
+:root {
+  --marginHorizontalRuler: var(--l-1);
 }
 
-/* More reasonable default to override per template */
-@media screen and (min-width: 100px) {
-  hr {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-top: calc((30 / 18) * 1em);
-    margin-bottom: calc((29 / 18) * 1em); /* -1px for border-bottom */
+hr {
+  clear: both;
+  border: none;
+  margin: var(--marginHorizontalRuler) auto; /* Extra-large for visibility in mini-map (<100px wide) */
+  height: var(--1px);
+  background-color: var(--colorBorder);
+}
+
+/* Breakpoint maxWidthMinimap */
+@media screen and (max-width: 99px) {
+  :root {
+    --marginHorizontalRuler: var(--l-3);
+    --colorBorder: var(--colorText);
   }
 }
 
-/* Horizontal rule responsive adjustments */
+/* Breakpoint minWidthMinimap */
+@media screen and (min-width: 100px) {
+  :root {
+    --marginHorizontalRuler: var(--l-2);
+  }
+}
+
+/* Breakpoint minWidthDesktop */
 @media screen and (min-width: 1080px) {
   hr {
     margin-top: 46px;

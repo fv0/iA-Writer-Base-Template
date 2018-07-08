@@ -6,8 +6,8 @@
 @import "css/1-setup/fonts.css";
 
 /* Blocks */
-@import "css/3-elements/footnotes.css";
-@import "css/3-elements/table.css";
+@import "css/2-blocks/footnotes.css";
+@import "css/2-blocks/table.css";
 
 /* Elements */
 @import "css/3-elements/blockquote.css";
@@ -24,7 +24,7 @@
 
 
 /* Use 500 not 600 for code that inherits bold (suppliments core.css) */
-:-webkit-any(h1, h2, h3, h4, h5, h6) :-webkit-any(code, samp, kbd) {
+:matches(h1, h2, h3, h4, h5, h6) :matches(code, samp, kbd) {
   font-weight: 500;
 }
 

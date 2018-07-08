@@ -5,9 +5,9 @@ ul {
 }
 
 ul > li:before {
-  content: "• ";
+  content: "•";
   float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
-  margin-left: calc((20 / 18) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  padding-right: var(--l-quarter);
 }
 
 /* Indent ordered lists in blockquotes */
@@ -16,10 +16,9 @@ blockquote ol {
   margin-left: calc((40 / 18) * -1em); /* -40px when width = 1080px */
 }
 
-/* Responsive list padding (default used by Sans, overridden for Mono and Serif) */
 ul,
 ol {
-  padding-left: 1.5rem; /* 22.5px for font-size: 15px @320px. rem works better for RWD than % */
+  padding-left: var(--l-1);
 }
 
 @media screen and (min-width: 760px) {

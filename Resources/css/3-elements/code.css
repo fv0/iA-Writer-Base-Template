@@ -1,11 +1,17 @@
-/* Code */
-
 pre,
 code,
-kbd {
-  border-radius: 2px;
+kbd,
+samp {
+  font-family: var(--fontMonospace);
+  font-size: var(--fontSizeSmall);
   white-space: pre-wrap;
-  background-color: #f0f0f0;
+  background-color: var(--colorBackgroundCode);
+  box-shadow: inset 0 0 0 var(--1px) var(--colorBorder);
+}
+
+pre code {
+  /* Don’t repeat box-shadow, when the parent already has it */
+  box-shadow: none;
 }
 
 figure pre {
@@ -13,38 +19,12 @@ figure pre {
 }
 
 pre {
-  padding: 1rem;
+  padding: var(--l-half);
   overflow: hidden;
 }
 
-pre code {
-  padding: 0;
-}
-
 code,
-samp,
-kbd {
-  font-family: var(--fontMonospace);
-  font-size: calc((15 / 19) * 1em); /* 0.7895em = 15px @ font-size: 19px (based on 12/16px @640 = 15.2px). Values for Serif (smallest), others need overrides */
-  font-weight: 200; /* Light weight for non-Retina (@1x) */
-}
-
-/* Semi-light weight for Retina (@2x) */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
-  code,
-  samp,
-  kbd {
-    font-weight: 300;
-  }
-}
-
-code,
-kbd {
-  padding: 0.08333em 0.1667em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
-}
-
-code,
-samp,
-kbd {
-  font-size: calc((15 / 18) * 1em); /* 0.8333 = 15px @ font-size: 18px */
+kbd,
+samp {
+  padding: var(--2px) var(--6px);
 }
