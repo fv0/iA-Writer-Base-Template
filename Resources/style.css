@@ -2,6 +2,7 @@
 @import "css/1-setup/variables.css";
 @import "core.css";
 @import "css/1-setup/base.css";
+/* @import "css/1-setup/legacy-font-sizing.css"; */
 @import "css/1-setup/fonts.css";
 
 /* Blocks */

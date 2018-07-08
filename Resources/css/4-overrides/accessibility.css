@@ -1,0 +1,44 @@
+/* Accessibility sizing for iOS phones */
+.content-size-xs > body {
+  font-size: 80%;
+}
+
+.content-size-s > body {
+  font-size: 87%;
+}
+
+.content-size-m > body {
+  font-size: 93%;
+}
+
+.content-size-xl > body {
+  font-size: 113%;
+}
+
+.content-size-xxl > body {
+  font-size: 127%;
+}
+
+.content-size-xxxl > body {
+  font-size: 140%;
+}
+
+.content-size-accessibility-m > body {
+  font-size: 153%;
+}
+
+.content-size-accessibility-l > body {
+  font-size: 167%;
+}
+
+.content-size-accessibility-xl > body {
+  font-size: 180%;
+}
+
+.content-size-accessibility-xxl > body {
+  font-size: 193%;
+}
+
+.content-size-accessibility-xxxl > body {
+  font-size: 207%;
+}
