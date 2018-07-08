@@ -1,0 +1,14 @@
+/* img is wrapped in p on export by default, so leave as inline */
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+figure img {
+  display: block;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}

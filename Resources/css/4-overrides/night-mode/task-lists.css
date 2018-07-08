@@ -1,0 +1,19 @@
+/* Checkbox color in Night Mode (=text color) */
+.night-mode .task-list-item-checkbox {
+  background-image: url('box-night-mode-ios.svg');
+}
+
+.night-mode .task-list-item-checkbox:checked {
+  background-image: url('check-night-mode-ios.svg');
+}
+
+/* OS X color */
+@media screen and (min-device-width: 1152px) {
+  .night-mode .task-list-item-checkbox {
+    background-image: url('box-night-mode-osx.svg');
+  }
+
+  .night-mode .task-list-item-checkbox:checked {
+    background-image: url('check-night-mode-osx.svg');
+  }
+}

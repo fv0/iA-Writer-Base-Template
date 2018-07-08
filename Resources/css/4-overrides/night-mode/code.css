@@ -1,0 +1,14 @@
+.night-mode pre,
+.night-mode code,
+.night-mode kbd {
+  background-color: #292927; /* For iOS */
+}
+
+/* Colors for OS X */
+@media screen and (min-device-width: 1152px) {
+  .night-mode pre,
+  .night-mode code,
+  .night-mode kbd {
+    background-color: #282827;
+  }
+}

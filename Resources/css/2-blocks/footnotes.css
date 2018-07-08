@@ -1,0 +1,45 @@
+/* Footnotes */
+
+.footnotes {
+  margin-top: calc((45 / 1080) * 100%); /* 45px when width: 1080px (excluding padding) */
+  page-break-before: avoid;
+  font-size: calc((16 / 18) * 1rem); /* 0.8889rem, 16/18px @1080px wide, default for Monospace */
+  line-height: calc(27 / 16); /* 1.6875, 27px @1080px wide, default for Monospace */
+}
+
+.footnotes hr {
+  margin-top: calc((60 / 760) * 100%); /* 60px when width: 1080px */
+  page-break-after: avoid;
+}
+
+.footnotes p {
+  margin: 0 auto;
+}
+
+/* Remove underline on .reversefootnote arrow for iOS, as it’s turned into an emoji */
+@media screen and (max-device-width: 1024px) {
+  .reversefootnote {
+    text-decoration: none;
+  }
+}
+
+/* Footnotes responsive adjustments when width: 1080px */
+@media screen and (min-width: 1080px) {
+  .footnotes {
+    margin-top: 45px;
+  }
+
+  /* Hanging footnote ordinals */
+  .footnotes ol {
+    padding-left: 0;
+  }
+
+  .footnotes hr {
+    margin-top: 60px;
+  }
+}
+
+.footnotes {
+  font-size: 1em; /* 17px @1080px wide */
+  line-height: calc(30 / 18); /* 1.6667 = 30px @ font-size: 18px */
+}

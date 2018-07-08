@@ -1,0 +1,85 @@
+/* Print styles */
+@media print {
+
+  *,
+  *:before,
+  *:after {
+    color: #000 !important; /* black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html {
+    margin: 0; /* Override for safety */
+    padding: 0; /* Override for safety */
+    font-size: 9pt; /* ← needs to be set per template to counter responsive typography */
+    background: transparent !important; /* Only on html due to checkboxes */
+  }
+
+  body {
+    margin: 0 auto; /* Set all values for safety */
+    padding: 12pt 50pt; /* Set all values for safety */
+  }
+
+  /* Make sure there’s no margin-top on first element */
+  body > :first-child {
+    margin-top: 0;
+  }
+
+  /* h6 excluded as the page-break-inside rule conflicts with page-initial inline h6 when printed */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  img,
+  figure {
+    page-break-inside: avoid;
+    page-break-after: avoid; /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=5097 */
+  }
+
+  p {
+    /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=39735 */
+    widows: 3;
+    orphans: 3;
+  }
+
+  hr {
+    border-bottom-color: #000 !important;
+  }
+
+  /* Underline on superscript footnote number, which when clicked shows an error */
+  .footnote {
+    text-decoration: none;
+  }
+
+  /* Underline for table of contents on printed pages */
+  .TOC a {
+    text-decoration: none;
+  }
+
+  /* Link which allows you to go back to the text from footnote—useless on a printed page */
+  .reversefootnote {
+    display: none;
+  }
+
+  /* Code has a lighter background on printed pages */
+  code, pre, kbd {
+    background-color: #f7f7f7;
+  }
+
+  .tooltip:after {
+    display: none;
+  }
+}
+
+/* font-size needs to be set here again otherwise responsive typography overrides it */
+@media print {
+  html {
+    font-size: 9.1pt;
+  }
+
+  body {
+    max-width: 365pt;
+  }
+}

@@ -1,0 +1,25 @@
+/* Fake sub-pixel lines */
+.night-mode hr {
+  border-bottom-color: #666;
+}
+
+/* Intended border color from 200px for OS X */
+@media screen and (min-width: 200px) and (min-device-width: 1152px) {
+  .night-mode hr {
+    border-bottom-color: #cccccc;
+  }
+}
+
+/* Intended border color from 200px */
+@media screen and (min-width: 200px) {
+  .night-mode hr {
+    border-bottom-color: #dedede;
+  }
+}
+
+/* First tweakpoint modifying core.css */
+@media screen and (min-width: 150px) {
+  .night-mode hr {
+    border-bottom-color: #888;
+  }
+}

@@ -1,0 +1,19 @@
+.night-mode,
+.night-mode a {
+  color: #dedede; /* iOS text color */
+}
+
+.night-mode {
+  background-color: #101010; /* iOS background color */
+}
+
+@media screen and (min-device-width: 1152px) {
+  .night-mode,
+  .night-mode a {
+    color: #cccccc; /* OS X text color */
+  }
+
+  .night-mode {
+    background-color: #101010;
+  }
+}

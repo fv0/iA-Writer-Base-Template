@@ -1,0 +1,117 @@
+/* Regular versions on OS X, slim versions on iOS (assumes iOS will never have regular versions) */
+@font-face {
+  font-family: "NittiPro";
+  font-weight: 300;
+  font-style: normal;
+  src: local("NittiPro-SemiLight"), local("NittiPro-SemiLightSlim");
+}
+
+@font-face {
+  font-family: "NittiPro";
+  font-weight: 300;
+  font-style: italic;
+  src: local("NittiPro-SemiLightItalic"), local("NittiPro-SemiLightItalicSlim");
+}
+
+@font-face {
+  font-family: "NittiPro";
+  font-weight: 500;
+  font-style: normal;
+  src: local("NittiPro-Medium"), local("NittiPro-MediumSlim");
+}
+
+@font-face {
+  font-family: "NittiPro";
+  font-weight: 500;
+  font-style: italic;
+  src: local("NittiPro-MediumItalic"), local("NittiPro-MediumItalicSlim");
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 300;
+  font-style: normal;
+  src: local("NittiGrotesk-SemiLight");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 300;
+  font-style: italic;
+  src: local("NittiGrotesk-SemiLightItalic");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 400;
+  font-style: normal;
+  src: local("NittiGrotesk-Normal");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 400;
+  font-style: italic;
+  src: local("NittiGrotesk-NormalItalic");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 600;
+  font-style: normal;
+  src: local("NittiGrotesk-SemiBold");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 600;
+  font-style: italic;
+  src: local("NittiGrotesk-SemiBoldItalic");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 700;
+  font-style: normal;
+  src: local("NittiGrotesk-Bold");
+}
+
+@font-face {
+  font-family: "NittiGrotesk";
+  font-weight: 700;
+  font-style: italic;
+  src: local("NittiGrotesk-BoldItalic");
+}
+
+/* Nitti iA Small Caps */
+
+@font-face {
+  font-family: "NittiSCiA";
+  font-weight: 400;
+  /* Not supported in @font-face at time of writing
+  font-variant: small-caps;
+  text-transform: lowercase; */
+  src: local("NittiSCiA-Regular");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
+  @font-face {
+    font-family: "NittiSCiA";
+    font-weight: 400;
+    /* Not supported in @font-face at time of writing
+    font-variant: small-caps;
+    text-transform: lowercase; */
+    src: local("NittiSCiA-RegularHD");
+  }
+}
+
+@font-face {
+  font-family: "NittiSCiA";
+  font-weight: 700;
+  /* Not supported in @font-face at time of writing
+  font-variant: small-caps;
+  text-transform: lowercase; */
+  src: local("NittiSCiA-Bold");
+}

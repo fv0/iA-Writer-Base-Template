@@ -1,0 +1,39 @@
+/* Lists */
+/* Use custom bullet for unordered lists */
+ul {
+  list-style: none;
+}
+
+ul > li:before {
+  content: "• ";
+  float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
+  margin-left: calc((20 / 18) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+}
+
+/* Indent ordered lists in blockquotes */
+blockquote ul,
+blockquote ol {
+  margin-left: calc((40 / 18) * -1em); /* -40px when width = 1080px */
+}
+
+/* Responsive list padding (default used by Sans, overridden for Mono and Serif) */
+ul,
+ol {
+  padding-left: 1.5rem; /* 22.5px for font-size: 15px @320px. rem works better for RWD than % */
+}
+
+@media screen and (min-width: 760px) {
+  /* Left padding based on 40px browser default */
+  ul,
+  ol {
+    padding-left: 2.2222rem; /* ~40px for font-size: 18px. rem works better for RWD than % */
+  }
+}
+
+/* HACK: Prevent empty list items collapsing
+   Note this doesn’t work for paragraph lists, although we can fix via class or once has() is supported with: `ul li:not:has(p)::after` */
+ul li:empty::after,
+.task-list-item:last-child::after {
+  content: "";
+  display: inline-block;
+}

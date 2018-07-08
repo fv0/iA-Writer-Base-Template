@@ -1,0 +1,129 @@
+body > h1:first-child {
+  margin-top: 0; /* Controlled via body padding-top */
+}
+
+/* Emphasis */
+h1,
+h2,
+h3,
+h4,
+strong,
+blockquote em,
+th {
+  font-weight: 600;
+}
+
+/* Emphasis for Nitti Small Caps iA */
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* Headings */
+
+h1 {
+  margin-top: calc((60 / 23) * 1em); /* 60px @23px */
+  margin-bottom: calc((60 / 23) * 1em); /* 60px @23px */
+  font-size: calc((23 / 18) * 1em); /* 1.2778em = 23px @ font-size: 18px */
+  line-height: calc(30 / 23); /* 1.304 = 30px @ font-size: 23px */
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  margin-top: calc((60 / 21) * 1em); /* 60px @21px */
+  margin-bottom: calc((30 / 18) * 1em); /* 30px @21px */
+  font-size: calc((21 / 18) * 1em); /* 1.1667em = 21px @ font-size: 18px */
+  line-height: calc(30 / 21); /* 1.4286 = 30px @ font-size: 21px */
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-top: calc((30 / 18) * 1em);
+  font-size: 1em;
+}
+
+h3,
+h4,
+h5 {
+  margin-bottom: 0;
+}
+
+h3,
+h4 {
+  line-height: calc(30 / 18); /* 1.6667 = 30px @ font-size: 18px */
+}
+
+h4 {
+  font-style: italic;
+}
+
+h5,
+h6 {
+  line-height: normal; /* To avoid SC baseline being 1-2px lower in Safari */
+  font-family: "NittiSCiA", "Keyboard", sans-serif;
+  text-transform: lowercase;
+}
+
+/* Display h6 as run-in: see core.css */
+
+/* Subheading adjustments */
+
+h1 + h1 {
+  margin-top: calc((45 / 23) * -1em);
+}
+
+h1 + h2 {
+  margin-top: calc((45 / 21) * -1em);
+}
+
+h2 + h1 {
+  margin-top: calc((15 / 23) * -1em);
+}
+
+h2 + h2 {
+  margin-top: calc((15 / 21) * -1em);
+}
+
+:-webkit-any(h1, h2, h3, h4, h5, h6) + :-webkit-any(h3, h4, h5, h6),
+body > h6:first-child {
+  margin-top: 0;
+}
+
+/* Display h6 as run-in by default when followed by p
+   (h6 is no longer run-in if content is greater than one line long. Display can break if consecutive h6s are used before a <1 line p)
+   Note: Specced ways to do this display:run-in and :has() are not implemented at time of writing */
+h6 {
+  float: left;
+  margin: 0 0.5em 0 0; /* 9px @ font-size: 18px */
+}
+
+  /* Clear all siblings after floated h6… */
+h6 ~ * {
+  clear: both;
+}
+
+  /* …except immediately following paragraph */
+h6 + p {
+  clear: none;
+}
+
+/* Automatic Heading Numbering */
+
+/* Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/ */
+
+.number-headings body {counter-reset: h2}
+.number-headings h2 {counter-reset: h3}
+.number-headings h3 {counter-reset: h4}
+.number-headings h4 {counter-reset: h5}
+/* .number-headings h5 {counter-reset: h6} */ /* Omitted H6. Inline headings are useful in non-hierarchical contexts */
+.number-headings h2:before {counter-increment: h2; content: counter(h2) ". "}
+.number-headings h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+.number-headings h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+.number-headings h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+/* .number-headings h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "} */ /* H6 omitted as above */
+.number-headings h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none}
+
+/* Don't number author H2 on title page */
+.title > h2:before {content: ""}

@@ -1,0 +1,27 @@
+:root {
+  /*
+    Fonts
+  */
+  --fontMonospace: "NittiPro", "Keyboard", monospace;
+  --fontText: "NittiGrotesk", "Keyboard", sans-serif;
+
+  /*
+    Colors
+  */
+  --colorText: #000;
+  --colorLink: var(--colorText);
+  --colorBackground: hsl(0, 0%, 98%);
+  --colorBorder: hsl(0, 0%, 90%);
+
+  /*
+    Stlyes
+  */
+  /* Underline links? Choose between none or underline */
+  --styleLink: underline;
+
+  /*
+    Sizes
+  */
+  --fontSizeBase: 1rem;
+  --1px: calc(1 / 16 * var(--fontSizeBase));
+}

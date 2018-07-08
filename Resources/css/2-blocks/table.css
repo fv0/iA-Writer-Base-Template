@@ -1,0 +1,27 @@
+/* Smart Table ToolTips */
+
+.tooltip {
+    position: relative;
+}
+
+table .tooltip:after {
+    font-size: 10px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    top: calc(50% - 10px);
+    left: 0%;
+    content: attr(id);
+    padding: 2px 4px;
+    position: absolute;
+    z-index: 98;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+table:hover .tooltip:after {
+    /* Tooltips are always visible, and use transparent background and text color unless table is hovered because WebKit has a bug where table caption jumps around if table cells get a new abolutely positioned element inside. */
+    color: #fff;
+    background-color: #000;
+}
