@@ -1,15 +1,17 @@
-/* Task Lists
-   Left padding based on 40px default */
-
 /* Position ordinal counters so 1-9 left-align with left content edge. Subsequent counters will begin in gutter. */
 ol .task-list-item {
   margin-left: -0.6667rem; /* ~-10px @ font-size: 15px */
   padding-left: 0.6667rem; /* ~10px @ font-size: 15px */
 }
 
+.task-list-item-checkbox + :matches(p, pre, figure, img) {
+  margin-top: 0;
+}
+
 /* Hide default bullets for unordered task lists. */
 ul .task-list-item {
   list-style-type: none;
+  position: relative;
 }
 
 /* Hide gen-content bullets for unordered task lists. */
@@ -18,22 +20,26 @@ ul .task-list-item:before {
 }
 
 .task-list-item-checkbox {
-  float: left; /* Removes from flow in case of paragraph list items */
-  width: 1.6rem; /* Same as p line-height (changing width/height affects svg size) */
-  height: 1.6rem; /* Same as width */
-  margin: 0 0 0 -1.6rem; /* 0s to overwrite user agent styles */
+  --size: var(--l-1);
+
+  position: absolute;
+  top: 0;
+  left: calc(var(--l-1) * -1);
+  width: var(--size); /* Same as p line-height (changing width/height affects svg size) */
+  height: var(--size); /* Same as width */
   border: none; /* Otherwise iPhone draws a border */
-  font-size: 1rem; /* Required to overwrite user agent styles, set to same as p */
-  background-image: url('box.svg');
+  margin: 0;
+  font-size: var(--fontSizeBase); /* Required to overwrite user agent styles, set to same as p */
+  background-image: url('../../images/box.svg');
   background-repeat: no-repeat;
-  background-position: 40% 40%; /* x=roughly align with bullets and between ordinal and text, y=4px down to roughly align to baseline. */
+  background-position: 50% 50%; /* x = bottom right, y = vertically centered
   background-size: 50% 50%; /* Desired size 12px / 21px line-height for Preview */
   background-color: transparent;
   -webkit-print-color-adjust: exact; /* Prevents from hiding when printed */
   -webkit-appearance: none; /* Disables system checkbox image */
-  opacity: 1.0; /* Otherwise they are 0.4 on iPhone, where it applies disabled effect even with above */
+  opacity: 1; /* Otherwise they are 0.4 on iPhone, where it applies disabled effect even with above */
 }
 
 .task-list-item-checkbox:checked {
-  background-image: url('check.svg');
+  background-image: url('../../images/check.svg');
 }
