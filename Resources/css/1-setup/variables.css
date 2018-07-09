@@ -1,53 +1,48 @@
 :root {
-  /*
-    Fonts
-  */
+  /*————————————————————————————————————————————————————————————————————————————
+  Fonts
+  ————————————————————————————————————————————————————————————————————————————*/
   --fontMonospace: "NittiPro", "Keyboard", monospace;
   --fontText: "NittiGrotesk", "Keyboard", sans-serif;
 
-  /*
-    Colors
-  */
-  --colorText: #000;
+  /*————————————————————————————————————————————————————————————————————————————
+  Colors
+  ————————————————————————————————————————————————————————————————————————————*/
+  --colorText: hsl(0, 0%, 0%);
   --colorLink: var(--colorText);
   --colorBackground: hsl(0, 0%, 98%);
   --colorBackgroundCode: hsl(0, 0%, 92%);
   --colorBorder: hsl(0, 0%, 86%);
 
-  /*
-    Stlyes
-  */
-  /* Underline links? Choose between none or underline */
+  /*————————————————————————————————————————————————————————————————————————————
+  Styling
+  ————————————————————————————————————————————————————————————————————————————*/
   --styleLink: underline;
 
-  /*
-    Typography
-  */
-  --fontSizeBase: 1rem; /* Keep this in the rem unit */
-
-  /* Headings */
+  /*————————————————————————————————————————————————————————————————————————————
+  Typography
+  ————————————————————————————————————————————————————————————————————————————*/
   --typoScale: 1.3;
-  --fontSizeH1: calc(var(--fontSizeBase) * var(--typoScale) * var(--typoScale) * var(--typoScale));
-  --fontSizeH2: calc(var(--fontSizeBase) * var(--typoScale) * var(--typoScale));
-  --fontSizeHeading: var(--fontSizeBase);
+  --fontSizeBase: 1rem;
   --fontSizeSmall: calc(var(--fontSizeBase) / 1.15);
 
+  /* Headings */
+  --fontSizeH1: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale) * var(--typoScale)));
+  --fontSizeH2: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale)));
+  --fontSizeHeading: var(--fontSizeBase);
+
   --lineHeightBase: 1.6;
-  --lineHeightH1: 1.2;
-  --lineHeightH2: 1.2;
+  --lineHeightH1: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
+  --lineHeightH2: var(--line);
 
-  /* Sizing helpers */
-  --1px: calc(1 / 16 * var(--fontSizeBase));
-  --2px: calc(2 / 16 * var(--fontSizeBase));
-  --3px: calc(3 / 16 * var(--fontSizeBase));
-  --4px: calc(4 / 16 * var(--fontSizeBase));
-  --5px: calc(5 / 16 * var(--fontSizeBase));
-  --6px: calc(6 / 16 * var(--fontSizeBase));
+  /*————————————————————————————————————————————————————————————————————————————
+  Layout
+  ————————————————————————————————————————————————————————————————————————————*/
 
-  /* Vertical Rhythm */
+  /* Establish vertical rhythm */
   --rhythm: var(--fontSizeBase) * var(--lineHeightBase);
 
-  /* Line margins */
+  /* Baseline margins */
   --l-eigth: calc(0.125 * var(--rhythm));
   --l-quarter: calc(0.25 * var(--rhythm));
   --l-half: calc(0.5 * var(--rhythm));
@@ -61,4 +56,12 @@
   --l-8: calc(8 * var(--rhythm));
   --l-9: calc(9 * var(--rhythm));
   --l-10: calc(10 * var(--rhythm));
+
+  /* Sizing helpers */
+  --1px: calc(1 / 16 * var(--fontSizeBase));
+  --2px: calc(2 / 16 * var(--fontSizeBase));
+  --3px: calc(3 / 16 * var(--fontSizeBase));
+  --4px: calc(4 / 16 * var(--fontSizeBase));
+  --5px: calc(5 / 16 * var(--fontSizeBase));
+  --6px: calc(6 / 16 * var(--fontSizeBase));
 }

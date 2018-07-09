@@ -98,7 +98,7 @@ li > :matches(p, pre, figure, img) {
   margin-top: var(--l-half);
 }
 
-li > p:first-child {
+li :first-child {
   margin-top: 0;
 }
 

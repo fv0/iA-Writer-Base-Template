@@ -17,32 +17,32 @@ h6 {
 /* Headings */
 
 h1 {
-  --marginLinesTop: var(--l-2);
-  --marginLinesBottom: var(--l-1);
+  --marginTop: var(--l-2);
+  --marginBottom: var(--l-1);
 
   font-size: var(--fontSizeH1);
   line-height: var(--lineHeightH1);
-  margin-top: calc((var(--marginLinesTop) - var(--fontSizeH1)) + var(--marginLinesTop));
-  margin-bottom: calc((var(--marginLinesBottom) - var(--fontSizeH1)) + var(--marginLinesBottom));
+  margin-top: calc((var(--marginTop) - var(--fontSizeH1)) + var(--marginTop));
+  margin-bottom: calc((var(--marginBottom) - var(--fontSizeH1)) + var(--marginBottom));
 }
 
 h2 {
-  --marginLinesTop: var(--l-1);
-  --marginLinesBottom: var(--l-1);
+  --marginTop: var(--l-1);
+  --marginBottom: var(--l-1);
 
-  margin-top: calc((var(--marginLinesTop) - var(--fontSizeH2)) + var(--marginLinesTop));
-  margin-bottom: calc((var(--marginLinesBottom) - var(--fontSizeH2)) + var(--marginLinesBottom));
+  margin-top: calc((var(--marginTop) - var(--fontSizeH2)) + var(--marginTop));
+  margin-bottom: calc((var(--marginBottom) - var(--fontSizeH2)) + var(--marginBottom));
   font-size: var(--fontSizeH2);
-  line-height: var(--lineHeightH2);
+  line-height: var(--lineHeightH1);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  --marginLinesTop: var(--l-1);
+  --marginTop: var(--l-1);
 
-  margin-top: calc((var(--marginLinesTop) - var(--fontSizeHeading)) + var(--marginLinesTop));
+  margin-top: calc((var(--marginTop) - var(--fontSizeHeading)) + var(--marginTop));
   font-size: var(--fontSizeHeading);
   line-height: var(--lineHeightBase);
 }
@@ -64,7 +64,7 @@ h1 + h1,
 h1 + h2,
 h2 + h1,
 h2 + h2 {
-  --marginLinesTop: var(--l-1);
+  --marginTop: var(--l-1);
 }
 
 :matches(h1, h2, h3, h4, h5, h6) + :matches(h3, h4, h5, h6) {

@@ -1,27 +1,41 @@
-/* Setup */
+/*————————————————————————————————————————————————————————————————————————————
+Setup
+————————————————————————————————————————————————————————————————————————————*/
 @import "css/1-setup/variables.css";
 @import "core.css";
 @import "css/1-setup/base.css";
 /* @import "css/1-setup/legacy-font-sizing.css"; */
-@import "css/1-setup/fonts.css";
+@import "fonts.css";
 
-/* Blocks */
+/*————————————————————————————————————————————————————————————————————————————
+Blocks
+————————————————————————————————————————————————————————————————————————————*/
 @import "css/2-blocks/footnotes.css";
 @import "css/2-blocks/table.css";
 
-/* Elements */
+/*————————————————————————————————————————————————————————————————————————————
+Elements
+————————————————————————————————————————————————————————————————————————————*/
 @import "css/3-elements/blockquote.css";
-@import "css/3-elements/Code.css";
+@import "css/3-elements/code.css";
 @import "css/3-elements/headings.css";
 @import "css/3-elements/image.css";
 @import "css/3-elements/lists.css";
 @import "css/3-elements/ruler.css";
 @import "css/3-elements/task-lists.css";
 
-/* Overrides */
-@import "css/night-mode.css";
+/*————————————————————————————————————————————————————————————————————————————
+Overrides
+————————————————————————————————————————————————————————————————————————————*/
+@import "css/4-overrides/night-mode.css";
+@import "css/4-overrides/accessibility.css";
+@import "css/4-overrides/print.css";
+@import "css/4-overrides/preferences.css";
 
-
+/*————————————————————————————————————————————————————————————————————————————
+User settings
+————————————————————————————————————————————————————————————————————————————*/
+@import "user.css";
 
 /* Use 500 not 600 for code that inherits bold (suppliments core.css) */
 :matches(h1, h2, h3, h4, h5, h6) :matches(code, samp, kbd) {
@@ -60,35 +74,4 @@
     td {
         border-top-color: #1a1a1a;
     }
-}
-
-/* Print styles */
-
-
-/** OBJECTS → see core.css base styles for:
- *  - Indent Paragraphs
- *  - Footnotes
- *  - Task lists
- */
-
-/* Indent Paragraphs */
-.indent-paragraphs p + p {
-  text-indent: calc((20 / 18) * 1em); /* 1.1111em = 20px @ font-size: 18px */
-}
-
-/* Night Mode */
-
-/* Imitate sub-pixel line for narrow widths */
-
-
-
-/* Footnote */
-
-
-/* Task Lists */
-
-.task-list-item-checkbox {
-  width: 1.6667em; /* line-height */
-  height: 1.6667em; /* same as width */
-  background-position: 60% 48%; /* tweak position */
 }

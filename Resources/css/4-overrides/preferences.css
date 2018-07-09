@@ -1,0 +1,3 @@
+.indent-paragraphs p + p {
+  text-indent: var(--l-1);
+}
