@@ -2,19 +2,12 @@ h1,
 h2,
 h3,
 h4,
-strong,
-blockquote em,
-th {
-  font-weight: 600;
-}
-
-/* Emphasis for Nitti Small Caps iA */
 h5,
-h6 {
+h6,
+strong,
+th {
   font-weight: 700;
 }
-
-/* Headings */
 
 h1 {
   --marginTop: var(--l-2);

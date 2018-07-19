@@ -1,38 +1,28 @@
-
-
-* {
-  box-sizing: border-box;
-}
-
 html {
+  box-sizing: border-box;
   font-family: var(--fontText);
-  font-weight: 300; /* SemiLight weight for non-Retina (@1x) */
   font-size: 100%;
   line-height: var(--lineHeightText);
+  color: var(--colorText);
+  background-color: var(--colorBackground);
 }
 
-/* Normal weight for Retina… */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
-  html {
-    font-weight: 400;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
-
-/* …but only until 414px breakpoint on OS X */
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 414px) and (min-device-width: 1152px) , (min-resolution: 192dpi) and (min-width: 414px) and (min-device-width: 1152px) {
-  html {
-    font-weight: 300;
-  }
-}
-
-/* Responsive adjustments */
 
 body {
+  box-sizing: content-box; /* So measure calculations don’t need to include gutters */
   max-width: 750px;
-}
-
-html {
-  color: var(--colorText);
+  margin: 0 auto;
+  padding: 0 12px; /* 12px gutters to match iPhone 5 Title bar UI */
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility; /* NOTE May cause performance issues */
+  /* font-kerning is enabled by default in OS X Safari 7+ */
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
 }
 
 a {
@@ -41,19 +31,8 @@ a {
   color: var(--colorLink);
 }
 
-html {
-  background-color: var(--colorBackground); /* iOS background color */
-}
-
-body {
-  box-sizing: content-box; /* So measure calculations don’t need to include gutters */
-  margin: 0 auto;
-  padding: 0 12px; /* 12px gutters to match iPhone 5 Title bar UI */
-  word-wrap: break-word;
-  text-rendering: optimizeLegibility; /* NOTE May cause performance issues */
-  /* font-kerning is enabled by default in OS X Safari 7+ */
-  -webkit-font-kerning: normal;
-  font-kerning: normal;
+a:hover {
+  text-decoration: none;
 }
 
 /* Vertical margins */

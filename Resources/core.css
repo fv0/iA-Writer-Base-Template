@@ -102,11 +102,6 @@ li :first-child {
   margin-top: 0;
 }
 
-/* Use 500 not 700 for code that inherits bold. This is supplimented for titles etc per template  */
-:matches(strong, bold, th) :matches(code, samp, kbd) {
-  font-weight: 500;
-}
-
 /* Prevent code line-height increasing heading line-height */
 :matches(h1, h2, h3, h4, h5, h6) > code, kbd {
   line-height: normal;

@@ -32,18 +32,6 @@ Overrides
 @import "css/4-overrides/print.css";
 @import "css/4-overrides/preferences.css";
 
-/*————————————————————————————————————————————————————————————————————————————
-User settings
-————————————————————————————————————————————————————————————————————————————*/
-@import "user.css";
-
-/* Use 500 not 600 for code that inherits bold (suppliments core.css) */
-:matches(h1, h2, h3, h4, h5, h6) :matches(code, samp, kbd) {
-  font-weight: 500;
-}
-
-/* @media Rules */
-
 /* Combined horizontal line styles, supplimenting core.css */
 
 /* Adjust border color to imitate sub-pixel lines */
