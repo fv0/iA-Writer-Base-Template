@@ -35,20 +35,13 @@ h5,
 h6 {
   --marginTop: var(--l-1);
 
-  margin-top: calc((var(--marginTop) - var(--fontSizeHeading)) + var(--marginTop));
-  font-size: var(--fontSizeHeading);
+  margin-top: calc((var(--marginTop) - var(--fontSizeBase)) + var(--marginTop));
+  font-size: var(--fontSizeBase);
   line-height: var(--lineHeightBase);
 }
 
 h4 {
   font-style: italic;
-}
-
-h5,
-h6 {
-  line-height: normal; /* To avoid SC baseline being 1-2px lower in Safari */
-  font-family: "NittiSCiA", "Keyboard", sans-serif;
-  text-transform: lowercase;
 }
 
 /* Subheading adjustments */

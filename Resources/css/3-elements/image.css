@@ -1,4 +1,7 @@
-/* img is wrapped in p on export by default, so leave as inline */
+/*
+  Image is wrapped in a <p> on export, so leave it displayed inline (is default).
+*/
+
 img {
   max-width: 100%;
   vertical-align: top;
@@ -9,6 +12,6 @@ figure img {
 }
 
 figcaption {
-    text-align: center;
-    font-style: italic;
+  text-align: center;
+  font-style: italic;
 }

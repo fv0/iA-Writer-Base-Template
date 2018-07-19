@@ -1,33 +1,5 @@
 /* Smart Table ToolTips */
 
-.tooltip {
-  position: relative;
-}
-
-table .tooltip:after {
-  content: attr(id);
-  font-size: var(--fontSizeSmall);
-  font-weight: bold;
-  background: var(--colorBackground);
-  border: var(--1px) solid var(--colorBorder);
-  border-bottom-width: 2px;
-  position: absolute;
-  top: 50%;
-  right: var(--l-quarter);
-  padding: 0 var(--4px);
-  transform: translateX(4px) translateY(-50%);
-  z-index: 1;
-  opacity: 0;
-  -webkit-user-select: none;
-  user-select: none;
-  transition: all 0.15s ease;
-}
-
-table:hover .tooltip:after {
-  opacity: 1;
-  transform: translateX(0) translateY(-50%);
-}
-
 table {
   font-size: var(--fontSizeSmall);
   border-collapse: collapse;
@@ -35,9 +7,10 @@ table {
 }
 
 thead {
-  border-bottom: 3px solid var(--colorBorder);
+  border-bottom: var(--3px) solid var(--colorBorder);
 }
 
+/* For better left-to-right scanability. */
 tbody tr:nth-child(odd) {
   background-color: var(--colorBackgroundCode);
 }
@@ -50,4 +23,38 @@ th {
 
 :matches(td, th):not(:last-child) {
   border-right: var(--1px) solid var(--colorBorder);
+}
+
+/*————————————————————————————————————————————————————————————————————————————
+  Table tooltips
+
+  1) Slide in tooltip from the right.
+————————————————————————————————————————————————————————————————————————————*/
+
+table .tooltip {
+  position: relative;
+}
+
+table .tooltip:after {
+  content: attr(id);
+  font-size: var(--fontSizeSmall);
+  font-weight: bold;
+  background: var(--colorBackground);
+  border: var(--1px) solid var(--colorBorder);
+  border-bottom-width: var(--2px);
+  position: absolute;
+  top: var(--l-quarter);
+  right: var(--l-quarter);
+  padding: 0 var(--4px);
+  transform: translateX(4px); /* [1] */
+  z-index: 1;
+  opacity: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+table:hover .tooltip:after {
+  opacity: 1;
+  transform: translateX(0);
 }

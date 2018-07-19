@@ -11,17 +11,14 @@ ul {
   list-style: none;
 }
 
-li {
-
-}
-
-ul > li:before {
-  content: "•";
+ul li:before {
+  content: var(--unorderedListSymbol);
   float: left;
-  margin-left: -1rem;
+  margin-left: calc(var(--fontSizeBase) * -1);
 }
 
-li:after {
+ul li:after {
+  /* Clearfix */
   content: "";
   clear: both;
   display: block;

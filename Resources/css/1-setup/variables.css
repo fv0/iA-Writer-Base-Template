@@ -1,12 +1,12 @@
 :root {
   /*————————————————————————————————————————————————————————————————————————————
-  Fonts
+    Fonts
   ————————————————————————————————————————————————————————————————————————————*/
   --fontMonospace: "NittiPro", "Keyboard", monospace;
   --fontText: "NittiGrotesk", "Keyboard", sans-serif;
 
   /*————————————————————————————————————————————————————————————————————————————
-  Colors
+    Colors
   ————————————————————————————————————————————————————————————————————————————*/
   --colorText: hsl(0, 0%, 0%);
   --colorLink: var(--colorText);
@@ -15,12 +15,13 @@
   --colorBorder: hsl(0, 0%, 86%);
 
   /*————————————————————————————————————————————————————————————————————————————
-  Styling
+    Styling
   ————————————————————————————————————————————————————————————————————————————*/
   --styleLink: underline;
+  --unorderedListSymbol: "•";
 
   /*————————————————————————————————————————————————————————————————————————————
-  Typography
+    Typography
   ————————————————————————————————————————————————————————————————————————————*/
   --typoScale: 1.3;
   --fontSizeBase: 1rem;
@@ -29,33 +30,33 @@
   /* Headings */
   --fontSizeH1: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale) * var(--typoScale)));
   --fontSizeH2: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale)));
-  --fontSizeHeading: var(--fontSizeBase);
 
   --lineHeightBase: 1.6;
   --lineHeightH1: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
   --lineHeightH2: var(--line);
 
   /*————————————————————————————————————————————————————————————————————————————
-  Layout
+    Layout
   ————————————————————————————————————————————————————————————————————————————*/
 
   /* Establish vertical rhythm */
   --rhythm: var(--fontSizeBase) * var(--lineHeightBase);
 
   /* Baseline margins */
-  --l-eigth: calc(0.125 * var(--rhythm));
-  --l-quarter: calc(0.25 * var(--rhythm));
-  --l-half: calc(0.5 * var(--rhythm));
-  --l-1: calc(1 * var(--rhythm));
-  --l-2: calc(2 * var(--rhythm));
-  --l-3: calc(3 * var(--rhythm));
-  --l-4: calc(4 * var(--rhythm));
-  --l-5: calc(5 * var(--rhythm));
-  --l-6: calc(6 * var(--rhythm));
-  --l-7: calc(7 * var(--rhythm));
-  --l-8: calc(8 * var(--rhythm));
-  --l-9: calc(9 * var(--rhythm));
-  --l-10: calc(10 * var(--rhythm));
+  --l-eigth:          calc(0.125 * var(--rhythm));
+  --l-quarter:        calc(0.25 * var(--rhythm));
+  --l-half:           calc(0.5 * var(--rhythm));
+  --l-three-quarters: calc(0.75 * var(--rhythm));
+  --l-1:              calc(1 * var(--rhythm));
+  --l-2:              calc(2 * var(--rhythm));
+  --l-3:              calc(3 * var(--rhythm));
+  --l-4:              calc(4 * var(--rhythm));
+  --l-5:              calc(5 * var(--rhythm));
+  --l-6:              calc(6 * var(--rhythm));
+  --l-7:              calc(7 * var(--rhythm));
+  --l-8:              calc(8 * var(--rhythm));
+  --l-9:              calc(9 * var(--rhythm));
+  --l-10:             calc(10 * var(--rhythm));
 
   /* Sizing helpers */
   --1px: calc(1 / 16 * var(--fontSizeBase));
