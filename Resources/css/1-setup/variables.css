@@ -34,7 +34,7 @@
   --fontSizeH3: calc(var(--fontSizeBase) * var(--typoScaleH3));
   --fontSizeSmall: calc(var(--fontSizeBase) / 1.15);
 
-  --lineHeightBase: 1.6;
+  --lineHeightBase: 1.5;
   --lineHeightH1: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
   --lineHeightH2: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
 
