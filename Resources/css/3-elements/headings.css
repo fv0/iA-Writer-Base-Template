@@ -3,39 +3,51 @@ h2,
 h3,
 h4,
 h5,
-h6,
-strong,
-th {
-  font-weight: 700;
+h6 {
+  font-weight: var(--fontWeightHeading);
 }
 
 h1 {
-  --marginTop: var(--r-2);
-  --marginBottom: var(--r-1);
-
-  font-size: var(--fontSizeH1);
-  line-height: var(--lineHeightH1);
-  margin-top: calc((var(--marginTop) - var(--fontSizeH1)) + var(--marginTop));
-  margin-bottom: calc((var(--marginBottom) - var(--fontSizeH1)) + var(--marginBottom));
+  --top: var(--r-2);
+  --bottom: var(--r-1);
+  --fontSize: var(--fontSizeH1);
+  --lineHeight: var(--lineHeightH1);
 }
 
 h2 {
-  --marginTop: var(--r-1);
-  --marginBottom: var(--r-1);
+  --top: var(--r-1);
+  --bottom: var(--r-1);
+  --fontSize: var(--fontSizeH2);
+  --lineHeight: var(--lineHeightH2);
+}
 
-  margin-top: calc((var(--marginTop) - var(--fontSizeH2)) + var(--marginTop));
-  margin-bottom: calc((var(--marginBottom) - var(--fontSizeH2)) + var(--marginBottom));
-  font-size: var(--fontSizeH2);
-  line-height: var(--lineHeightH1);
+h1,
+h2 {
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  margin-top: calc((var(--top) - var(--fontSize)) + var(--top));
+  margin-bottom: calc((var(--bottom) - var(--fontSize)) + var(--bottom));
+}
+
+h3 {
+  font-size: var(--fontSizeH3);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  --marginTop: var(--r-1);
+  --top: var(--r-1);
+  --bottom: 0;
+  --fontSize: var(--fontSizeBase);
 
-  margin-top: calc((var(--marginTop) - var(--fontSizeBase)) + var(--marginTop));
+  margin-top: calc((var(--top) - var(--fontSize)) + var(--top));
+  margin-bottom: var(--r-1);
+}
+
+h4,
+h5,
+h6 {
   font-size: var(--fontSizeBase);
   line-height: var(--lineHeightBase);
 }
@@ -44,7 +56,27 @@ h4 {
   font-style: italic;
 }
 
-/* Subheading adjustments */
+h5 {
+  margin-bottom: 0;
+}
+
+/* Inline with following paragraphs */
+h6 {
+  display: inline-block;
+  margin: var(--r-1) var(--r-quarter) 0 0;
+}
+
+h6 + p {
+  display: inline;
+}
+
+h6 ~ * {
+  display: inherit;
+}
+
+/*————————————————————————————————————————————————————————————————————————————
+  Fine adjustments
+————————————————————————————————————————————————————————————————————————————*/
 
 h1 + h1,
 h1 + h2,
@@ -57,36 +89,60 @@ h2 + h2 {
   margin-top: 0;
 }
 
-/* Show h6 heading inline with following paragraph text */
-h6 {
-  display: inline-block;
-  margin: var(--r-half) var(--r-eigth) 0 0;
+/* Override vertical margin between headers and block-level elements */
+:matches(h3, h4, h5) + :matches(p, ol, ul, dl, figure, blockquote, pre, table) {
+  margin-top: 0;
 }
 
-h6 + p {
-  display: inline;
-}
-
-h6 ~ * {
-  display: inherit;
-}
-
-
-/* Automatic Heading Numbering */
+/*————————————————————————————————————————————————————————————————————————————
+  Automatic heading numbering
+————————————————————————————————————————————————————————————————————————————*/
 
 /* Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/ */
 
-.number-headings body {counter-reset: h2}
-.number-headings h2 {counter-reset: h3}
-.number-headings h3 {counter-reset: h4}
-.number-headings h4 {counter-reset: h5}
-/* .number-headings h5 {counter-reset: h6} */ /* Omitted H6. Inline headings are useful in non-hierarchical contexts */
-.number-headings h2:before {counter-increment: h2; content: counter(h2) ". "}
-.number-headings h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
-.number-headings h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
-.number-headings h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+.number-headings body {
+  counter-reset: h2;
+}
+.number-headings h2 {
+  counter-reset: h3;
+}
+.number-headings h3 {
+  counter-reset: h4;
+}
+.number-headings h4 {
+  counter-reset: h5;
+}
+/* Omitted H6. Inline headings are useful in non-hierarchical contexts */
+/* .number-headings h5 {
+  counter-reset: h6;
+} */
+.number-headings h2:before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+}
+.number-headings h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) ". ";
+}
+.number-headings h4:before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+.number-headings h5:before {
+  counter-increment: h5;
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
 /* .number-headings h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "} */ /* H6 omitted as above */
-.number-headings h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none}
+.number-headings h2.nocount:before,
+h3.nocount:before,
+h4.nocount:before,
+h5.nocount:before,
+h6.nocount:before {
+  content: "";
+  counter-increment: none;
+}
 
 /* Don't number author H2 on title page */
-.title > h2:before {content: ""}
+.title > h2:before {
+  content: "";
+}

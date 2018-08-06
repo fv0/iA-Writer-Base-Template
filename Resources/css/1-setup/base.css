@@ -14,15 +14,20 @@ html {
 }
 
 body {
-  box-sizing: content-box; /* So measure calculations don’t need to include gutters */
+  /* box-sizing: content-box; /* So measure calculations don’t need to include gutters */ */
   max-width: 750px;
   margin: 0 auto;
   padding: 0 12px; /* 12px gutters to match iPhone 5 Title bar UI */
   word-wrap: break-word;
-  text-rendering: optimizeLegibility; /* NOTE May cause performance issues */
-  /* font-kerning is enabled by default in OS X Safari 7+ */
+  font-variant-ligatures: normal;
   -webkit-font-kerning: normal;
   font-kerning: normal;
+
+  /* Vertical rhythm grid */
+  background-image: linear-gradient(lightgray 1px, transparent 1px);
+	background-size: 1px var(--r-half);
+  background-position: left top;
+  background-repeat: repeat;
 }
 
 a {
@@ -45,11 +50,4 @@ blockquote,
 pre,
 table {
   margin: var(--r-1) auto 0;
-}
-
-/* Override vertical margin between headers and block-level elements */
-:matches(h3, h4, h5) + :matches(p, ol, ul, dl, figure, blockquote, pre, table),
-:matches(h1, h2, h3, h4, h5) + h6 + *,
-hr + h6 {
-  margin-top: 0;
 }

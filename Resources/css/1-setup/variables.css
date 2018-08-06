@@ -24,16 +24,21 @@
     Typography
   ————————————————————————————————————————————————————————————————————————————*/
   --typoScale: 1.3;
+  --typoScaleH1: var(--typoScale) * var(--typoScale) * var(--typoScale);
+  --typoScaleH2: var(--typoScale) * var(--typoScale);
+  --typoScaleH3: var(--typoScale);
+
   --fontSizeBase: 1rem;
+  --fontSizeH1: calc(var(--fontSizeBase) * var(--typoScaleH1));
+  --fontSizeH2: calc(var(--fontSizeBase) * var(--typoScaleH2));
+  --fontSizeH3: calc(var(--fontSizeBase) * var(--typoScaleH3));
   --fontSizeSmall: calc(var(--fontSizeBase) / 1.15);
-
-  /* Headings */
-
-  --fontSizeH2: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale)));
 
   --lineHeightBase: 1.6;
   --lineHeightH1: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
-  --lineHeightH2: var(--line);
+  --lineHeightH2: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
+
+  --fontWeightHeading: 700;
 
   /*————————————————————————————————————————————————————————————————————————————
     Layout
@@ -58,7 +63,7 @@
   --r-9:              calc(9 * var(--rhythm));
   --r-10:             calc(10 * var(--rhythm));
 
-  /* Sizing helpers */
+  /* Relative sizing helpers */
   --1px: calc(1 / 16 * var(--fontSizeBase));
   --2px: calc(2 / 16 * var(--fontSizeBase));
   --3px: calc(3 / 16 * var(--fontSizeBase));
