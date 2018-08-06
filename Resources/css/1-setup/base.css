@@ -14,20 +14,13 @@ html {
 }
 
 body {
-  /* box-sizing: content-box; /* So measure calculations don’t need to include gutters */ */
-  max-width: 750px;
+  max-width: var(--lineLengthBody);
   margin: 0 auto;
-  padding: 0 12px; /* 12px gutters to match iPhone 5 Title bar UI */
+  padding: 0 var(--paddingBody);
   word-wrap: break-word;
   font-variant-ligatures: normal;
   -webkit-font-kerning: normal;
   font-kerning: normal;
-
-  /* Vertical rhythm grid */
-  background-image: linear-gradient(lightgray 1px, transparent 1px);
-	background-size: 1px var(--r-half);
-  background-position: left top;
-  background-repeat: repeat;
 }
 
 a {
@@ -50,4 +43,14 @@ blockquote,
 pre,
 table {
   margin: var(--r-1) auto 0;
+}
+
+/*————————————————————————————————————————————————————————————————————————————
+  User settings
+————————————————————————————————————————————————————————————————————————————*/
+
+/* Indent the first line of sequential paragraphs, via the “Indent Paragraph” setting */
+.indent-paragraphs p + p {
+  margin-top: 0;
+  text-indent: var(--r-1);
 }

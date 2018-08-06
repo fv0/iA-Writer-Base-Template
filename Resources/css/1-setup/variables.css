@@ -2,8 +2,8 @@
   /*————————————————————————————————————————————————————————————————————————————
     Fonts
   ————————————————————————————————————————————————————————————————————————————*/
-  --fontMonospace: "NittiPro", "Keyboard", monospace;
-  --fontText: "NittiGrotesk", "Keyboard", sans-serif;
+  --fontText: "IBM Plex Sans", "Keyboard", sans-serif;
+  --fontMonospace: "IBM Plex Mono", "Keyboard", monospace;
 
   /*————————————————————————————————————————————————————————————————————————————
     Colors
@@ -62,6 +62,18 @@
   --r-8:              calc(8 * var(--rhythm));
   --r-9:              calc(9 * var(--rhythm));
   --r-10:             calc(10 * var(--rhythm));
+
+  --paddingBody: var(--r-half);
+
+  /*
+    LINE LENGTHS
+    Sizes calculated with 16px font size.
+
+    64 characters: ~496px
+    72 characters: ~560px
+    80 characters: ~636px
+  */
+  --lineLengthBody: 560px;
 
   /* Relative sizing helpers */
   --1px: calc(1 / 16 * var(--fontSizeBase));
