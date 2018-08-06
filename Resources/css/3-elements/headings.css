@@ -70,10 +70,6 @@ h6 + p {
   display: inline;
 }
 
-h6 ~ * {
-  display: inherit;
-}
-
 /*————————————————————————————————————————————————————————————————————————————
   Fine adjustments
 ————————————————————————————————————————————————————————————————————————————*/
@@ -95,10 +91,15 @@ h2 + h2 {
 }
 
 /*————————————————————————————————————————————————————————————————————————————
-  Automatic heading numbering
+  User settings
 ————————————————————————————————————————————————————————————————————————————*/
 
-/* Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/ */
+/* Centered Headings */
+.center-headings :matches(h1, h2, h3, h4, h5) {
+  text-align: center;
+}
+
+/* Heading numbering. Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/ */
 
 .number-headings body {
   counter-reset: h2;

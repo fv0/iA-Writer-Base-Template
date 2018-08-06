@@ -109,20 +109,8 @@ li :first-child {
 
 /* OBJECTS */
 
-/* Center Headings
-   Center h1-h5 headings, via the Centered Headings setting */
-.center-headings :matches(h1, h2, h3, h4, h5) {
-  text-align: center;
-}
-
-/* Indent Paragraphs
-   Indent the first line of sequential paragraphs, via the Indent Paragraph setting */
-.indent-paragraphs p + p {
-  margin-top: 0;
-  text-indent: 1.2em; /* Tweaked per template */
-}
-
-.header, .footer {
+.header,
+.footer {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
