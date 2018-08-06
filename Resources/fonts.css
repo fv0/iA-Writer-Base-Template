@@ -1,117 +1,67 @@
-/* Regular versions on OS X, slim versions on iOS (assumes iOS will never have regular versions) */
-@font-face {
-  font-family: "NittiPro";
-  font-weight: 300;
-  font-style: normal;
-  src: local("NittiPro-SemiLight"), local("NittiPro-SemiLightSlim");
-}
+/*————————————————————————————————————————————————————————————————————————————
+  Monospace
+————————————————————————————————————————————————————————————————————————————*/
 
 @font-face {
-  font-family: "NittiPro";
-  font-weight: 300;
-  font-style: italic;
-  src: local("NittiPro-SemiLightItalic"), local("NittiPro-SemiLightItalicSlim");
-}
-
-@font-face {
-  font-family: "NittiPro";
-  font-weight: 500;
-  font-style: normal;
-  src: local("NittiPro-Medium"), local("NittiPro-MediumSlim");
-}
-
-@font-face {
-  font-family: "NittiPro";
-  font-weight: 500;
-  font-style: italic;
-  src: local("NittiPro-MediumItalic"), local("NittiPro-MediumItalicSlim");
-}
-
-/* Fonts */
-
-@font-face {
-  font-family: "NittiGrotesk";
-  font-weight: 300;
-  font-style: normal;
-  src: local("NittiGrotesk-SemiLight");
-}
-
-@font-face {
-  font-family: "NittiGrotesk";
-  font-weight: 300;
-  font-style: italic;
-  src: local("NittiGrotesk-SemiLightItalic");
-}
-
-@font-face {
-  font-family: "NittiGrotesk";
+  font-family: "IBM Plex Mono";
   font-weight: 400;
   font-style: normal;
-  src: local("NittiGrotesk-Normal");
+  src: local("IBMPlexMono");
 }
 
 @font-face {
-  font-family: "NittiGrotesk";
+  font-family: "IBM Plex Mono";
   font-weight: 400;
   font-style: italic;
-  src: local("NittiGrotesk-NormalItalic");
+  src: local("IBMPlexMono-Italic");
 }
 
 @font-face {
-  font-family: "NittiGrotesk";
-  font-weight: 600;
-  font-style: normal;
-  src: local("NittiGrotesk-SemiBold");
-}
-
-@font-face {
-  font-family: "NittiGrotesk";
-  font-weight: 600;
-  font-style: italic;
-  src: local("NittiGrotesk-SemiBoldItalic");
-}
-
-@font-face {
-  font-family: "NittiGrotesk";
+  font-family: "IBM Plex Mono";
   font-weight: 700;
   font-style: normal;
-  src: local("NittiGrotesk-Bold");
+  src: local("IBMPlexMono-Bold");
 }
 
 @font-face {
-  font-family: "NittiGrotesk";
+  font-family: "IBM Plex Mono";
   font-weight: 700;
   font-style: italic;
-  src: local("NittiGrotesk-BoldItalic");
+  src: local("IBMPlexMono-BoldItalic");
 }
 
-/* Nitti iA Small Caps */
+/*————————————————————————————————————————————————————————————————————————————
+  Body
+————————————————————————————————————————————————————————————————————————————*/
 
+/* Regular */
 @font-face {
-  font-family: "NittiSCiA";
+  font-family: "IBM Plex Sans";
   font-weight: 400;
-  /* Not supported in @font-face at time of writing
-  font-variant: small-caps;
-  text-transform: lowercase; */
-  src: local("NittiSCiA-Regular");
+  font-style: normal;
+  src: local("IBMPlexSans");
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), print {
-  @font-face {
-    font-family: "NittiSCiA";
-    font-weight: 400;
-    /* Not supported in @font-face at time of writing
-    font-variant: small-caps;
-    text-transform: lowercase; */
-    src: local("NittiSCiA-RegularHD");
-  }
-}
-
+/* Regular Italic */
 @font-face {
-  font-family: "NittiSCiA";
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-style: italic;
+  src: local("IBMPlexSans-Italic");
+}
+
+/* Bold */
+@font-face {
+  font-family: "IBM Plex Sans";
   font-weight: 700;
-  /* Not supported in @font-face at time of writing
-  font-variant: small-caps;
-  text-transform: lowercase; */
-  src: local("NittiSCiA-Bold");
+  font-style: normal;
+  src: local("IBMPlexSans-Bold");
+}
+
+/* Bold italic */
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 700;
+  font-style: italic;
+  src: local("IBMPlexSans-BoldItalic");
 }
