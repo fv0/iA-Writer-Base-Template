@@ -1,5 +1,5 @@
 :root {
-  --indentationList: var(--l-1);
+  --indentationList: var(--r-1);
 }
 
 ul,

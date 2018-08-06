@@ -1,5 +1,5 @@
 :root {
-  --marginHorizontalRuler: var(--l-1);
+  --marginHorizontalRuler: var(--r-1);
 }
 
 hr {
@@ -13,7 +13,7 @@ hr {
 /* Breakpoint maxWidthMinimap */
 @media screen and (max-width: 99px) {
   :root {
-    --marginHorizontalRuler: var(--l-3);
+    --marginHorizontalRuler: var(--r-3);
     --colorBorder: var(--colorText);
   }
 }
@@ -21,7 +21,7 @@ hr {
 /* Breakpoint minWidthMinimap */
 @media screen and (min-width: 100px) {
   :root {
-    --marginHorizontalRuler: var(--l-2);
+    --marginHorizontalRuler: var(--r-2);
   }
 }
 

@@ -1,7 +1,7 @@
 blockquote {
   border-left: var(--3px) solid var(--colorBorder);
-  padding-left: var(--l-half);
-  margin-right: var(--l-1);
+  padding-left: var(--r-half);
+  margin-right: var(--r-1);
   font-style: italic;
 }
 

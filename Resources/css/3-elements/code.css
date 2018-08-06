@@ -21,6 +21,6 @@ figure pre {
 }
 
 pre {
-  padding: var(--l-half);
+  padding: var(--r-half);
   overflow: hidden;
 }

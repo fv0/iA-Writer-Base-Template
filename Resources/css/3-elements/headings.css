@@ -10,8 +10,8 @@ th {
 }
 
 h1 {
-  --marginTop: var(--l-2);
-  --marginBottom: var(--l-1);
+  --marginTop: var(--r-2);
+  --marginBottom: var(--r-1);
 
   font-size: var(--fontSizeH1);
   line-height: var(--lineHeightH1);
@@ -20,8 +20,8 @@ h1 {
 }
 
 h2 {
-  --marginTop: var(--l-1);
-  --marginBottom: var(--l-1);
+  --marginTop: var(--r-1);
+  --marginBottom: var(--r-1);
 
   margin-top: calc((var(--marginTop) - var(--fontSizeH2)) + var(--marginTop));
   margin-bottom: calc((var(--marginBottom) - var(--fontSizeH2)) + var(--marginBottom));
@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  --marginTop: var(--l-1);
+  --marginTop: var(--r-1);
 
   margin-top: calc((var(--marginTop) - var(--fontSizeBase)) + var(--marginTop));
   font-size: var(--fontSizeBase);
@@ -50,7 +50,7 @@ h1 + h1,
 h1 + h2,
 h2 + h1,
 h2 + h2 {
-  --marginTop: var(--l-1);
+  --marginTop: var(--r-1);
 }
 
 :matches(h1, h2, h3, h4, h5, h6) + :matches(h3, h4, h5, h6) {
@@ -60,7 +60,7 @@ h2 + h2 {
 /* Show h6 heading inline with following paragraph text */
 h6 {
   display: inline-block;
-  margin: var(--l-half) var(--l-eigth) 0 0;
+  margin: var(--r-half) var(--r-eigth) 0 0;
 }
 
 h6 + p {

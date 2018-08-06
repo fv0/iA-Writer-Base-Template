@@ -17,7 +17,7 @@ tbody tr:nth-child(odd) {
 
 td,
 th {
-  padding: var(--l-quarter);
+  padding: var(--r-quarter);
   vertical-align: top;
 }
 
@@ -43,8 +43,8 @@ table .tooltip:after {
   border: var(--1px) solid var(--colorBorder);
   border-bottom-width: var(--2px);
   position: absolute;
-  top: var(--l-quarter);
-  right: var(--l-quarter);
+  top: var(--r-quarter);
+  right: var(--r-quarter);
   padding: 0 var(--4px);
   transform: translateX(4px); /* [1] */
   z-index: 1;

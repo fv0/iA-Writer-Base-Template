@@ -44,7 +44,7 @@ figure,
 blockquote,
 pre,
 table {
-  margin: var(--l-1) auto 0;
+  margin: var(--r-1) auto 0;
 }
 
 /* Override vertical margin between headers and block-level elements */

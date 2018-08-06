@@ -28,7 +28,7 @@
   --fontSizeSmall: calc(var(--fontSizeBase) / 1.15);
 
   /* Headings */
-  --fontSizeH1: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale) * var(--typoScale)));
+
   --fontSizeH2: calc(var(--fontSizeBase) * (var(--typoScale) * var(--typoScale)));
 
   --lineHeightBase: 1.6;
@@ -43,20 +43,20 @@
   --rhythm: var(--fontSizeBase) * var(--lineHeightBase);
 
   /* Baseline margins */
-  --l-eigth:          calc(0.125 * var(--rhythm));
-  --l-quarter:        calc(0.25 * var(--rhythm));
-  --l-half:           calc(0.5 * var(--rhythm));
-  --l-three-quarters: calc(0.75 * var(--rhythm));
-  --l-1:              calc(1 * var(--rhythm));
-  --l-2:              calc(2 * var(--rhythm));
-  --l-3:              calc(3 * var(--rhythm));
-  --l-4:              calc(4 * var(--rhythm));
-  --l-5:              calc(5 * var(--rhythm));
-  --l-6:              calc(6 * var(--rhythm));
-  --l-7:              calc(7 * var(--rhythm));
-  --l-8:              calc(8 * var(--rhythm));
-  --l-9:              calc(9 * var(--rhythm));
-  --l-10:             calc(10 * var(--rhythm));
+  --r-eigth:          calc(0.125 * var(--rhythm));
+  --r-quarter:        calc(0.25 * var(--rhythm));
+  --r-half:           calc(0.5 * var(--rhythm));
+  --r-three-quarters: calc(0.75 * var(--rhythm));
+  --r-1:              calc(1 * var(--rhythm));
+  --r-2:              calc(2 * var(--rhythm));
+  --r-3:              calc(3 * var(--rhythm));
+  --r-4:              calc(4 * var(--rhythm));
+  --r-5:              calc(5 * var(--rhythm));
+  --r-6:              calc(6 * var(--rhythm));
+  --r-7:              calc(7 * var(--rhythm));
+  --r-8:              calc(8 * var(--rhythm));
+  --r-9:              calc(9 * var(--rhythm));
+  --r-10:             calc(10 * var(--rhythm));
 
   /* Sizing helpers */
   --1px: calc(1 / 16 * var(--fontSizeBase));

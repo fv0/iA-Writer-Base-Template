@@ -5,7 +5,7 @@
 
 .footnotes hr {
   page-break-after: avoid;
-  margin-bottom: calc(var(--l-half) * -1);
+  margin-bottom: calc(var(--r-half) * -1);
 }
 
 /* Remove underline on .reversefootnote arrow for iOS, as it’s turned into an emoji */

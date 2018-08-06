@@ -95,7 +95,7 @@ dd {
 }
 
 li > :matches(p, pre, figure, img) {
-  margin-top: var(--l-half);
+  margin-top: var(--r-half);
 }
 
 li :first-child {
