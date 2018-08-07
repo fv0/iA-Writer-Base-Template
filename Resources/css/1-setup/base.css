@@ -42,5 +42,5 @@ table {
 /* Indent the first line of sequential paragraphs, via the “Indent Paragraph” setting */
 .indent-paragraphs p + p {
   margin-top: 0;
-  text-indent: var(--r-1);
+  text-indent: var(--indentationParagraph);
 }

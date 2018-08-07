@@ -75,6 +75,9 @@
   */
   --lineLengthBody: 560px;
 
+  --indentationParagraph: var(--r-1);
+  --indentationList: var(--r-1);
+
   /* Relative sizing helpers */
   --1px: calc(1 / 16 * var(--fontSizeBase));
   --2px: calc(2 / 16 * var(--fontSizeBase));
