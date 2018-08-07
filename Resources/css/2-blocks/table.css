@@ -1,16 +1,15 @@
-/* Smart Table ToolTips */
-
 table {
   font-size: var(--fontSizeSmall);
   border-collapse: collapse;
   border: var(--1px) solid var(--colorBorder);
+  width: 100%;
 }
 
 thead {
   border-bottom: var(--3px) solid var(--colorBorder);
 }
 
-/* For better left-to-right scanability. */
+/* Stripe rows for better left-to-right scanability. */
 tbody tr:nth-child(odd) {
   background-color: var(--colorBackgroundCode);
 }
@@ -28,7 +27,7 @@ th {
 /*————————————————————————————————————————————————————————————————————————————
   Table tooltips
 
-  1) Slide in tooltip from the right.
+  1) Slides in tooltip from the right.
 ————————————————————————————————————————————————————————————————————————————*/
 
 table .tooltip {
