@@ -1,0 +1,13 @@
+body {
+  max-width: var(--lineLengthBody);
+  margin: 0 auto;
+  padding: 0 var(--paddingBody);
+  word-wrap: break-word;
+  font-variant-ligatures: normal;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+}
+
+body > *:first-child {
+   margin-top: 0;
+}

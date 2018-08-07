@@ -1,15 +1,15 @@
 /*————————————————————————————————————————————————————————————————————————————
 Setup
 ————————————————————————————————————————————————————————————————————————————*/
-@import "css/1-setup/variables.css";
-@import "core.css";
-@import "css/1-setup/base.css";
-/* @import "css/1-setup/legacy-font-sizing.css"; */
 @import "fonts.css";
+@import "css/1-setup/variables.css";
+@import "css/1-setup/base.css";
+@import "css/1-setup/font-sizing.css";
 
 /*————————————————————————————————————————————————————————————————————————————
 Blocks
 ————————————————————————————————————————————————————————————————————————————*/
+@import "css/2-blocks/container.css";
 @import "css/2-blocks/footnotes.css";
 @import "css/2-blocks/table.css";
 
