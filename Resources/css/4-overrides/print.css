@@ -1,6 +1,4 @@
-/* Print styles */
 @media print {
-
   *,
   *:before,
   *:after {
@@ -17,13 +15,9 @@
   }
 
   body {
+    max-width: 365pt;
     margin: 0 auto; /* Set all values for safety */
     padding: 12pt 50pt; /* Set all values for safety */
-  }
-
-  /* Make sure there’s no margin-top on first element */
-  body > :first-child {
-    margin-top: 0;
   }
 
   /* h6 excluded as the page-break-inside rule conflicts with page-initial inline h6 when printed */
@@ -45,7 +39,7 @@
   }
 
   hr {
-    border-bottom-color: #000 !important;
+    background-color: #000 !important;
   }
 
   /* Underline on superscript footnote number, which when clicked shows an error */
@@ -64,7 +58,9 @@
   }
 
   /* Code has a lighter background on printed pages */
-  code, pre, kbd {
+  code,
+  pre,
+  kbd {
     background-color: #f7f7f7;
   }
 
@@ -73,13 +69,18 @@
   }
 }
 
-/* font-size needs to be set here again otherwise responsive typography overrides it */
-@media print {
-  html {
-    font-size: 9.1pt;
-  }
+.header,
+.footer {
+  margin-top: var(--r-2);
+  margin-bottom: var(--r-2);
+  text-align: center;
+}
 
-  body {
-    max-width: 365pt;
-  }
+.title {
+  margin-top: 40%;
+}
+
+address {
+  text-align: right;
+  white-space: pre;
 }
