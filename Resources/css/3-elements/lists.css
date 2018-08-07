@@ -24,17 +24,11 @@ ul li:after {
   display: block;
 }
 
-/* Indent ordered lists in blockquotes */
-blockquote ul,
-blockquote ol {
-  margin-left: calc((40 / 18) * -1em); /* -40px when width = 1080px */
+/* Decrease vertical margin in lists */
+li :matches(p, pre, figure, img) {
+  margin-top: var(--r-half);
 }
 
-
-@media screen and (min-width: 760px) {
-  /* Left padding based on 40px browser default */
-  ul,
-  ol {
-    padding-left: 2.2222rem; /* ~40px for font-size: 18px. rem works better for RWD than % */
-  }
+li :first-child {
+  margin-top: 0;
 }
