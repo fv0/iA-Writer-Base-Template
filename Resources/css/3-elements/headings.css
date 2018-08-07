@@ -85,9 +85,9 @@ h2 + h2 {
   margin-top: 0;
 }
 
-/* Override vertical margin between headers and block-level elements */
-:matches(h3, h4, h5) + :matches(p, ol, ul, dl, figure, blockquote, pre, table) {
-  margin-top: 0;
+:matches(h1, h2, h3, h4, h5, h6) :matches(pre, code, kbd, samp) {
+  /* Make code the same size as heading */
+  font-size: inherit;
 }
 
 /*————————————————————————————————————————————————————————————————————————————
@@ -99,7 +99,10 @@ h2 + h2 {
   text-align: center;
 }
 
-/* Heading numbering. Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/ */
+/* 
+  Heading numbering.
+  Thanks to Phil Archer. http://philarcher.org/diary/2013/headingnumbers/
+*/
 
 .number-headings body {
   counter-reset: h2;
