@@ -4,21 +4,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--instant-fontWeightHeading);
+  font-weight: var(--instant-heading-font-weight);
 }
 
 h1 {
   --instant-top: var(--instant-r-2);
   --instant-bottom: var(--instant-r-1);
-  --instant-fontSize: var(--instant-fontSizeH1);
-  --instant-lineHeight: var(--instant-lineHeightH1);
+  --instant-fontSize: var(--instant-h1-font-size);
+  --instant-lineHeight: var(--instant-h1-line-height);
 }
 
 h2 {
   --instant-top: var(--instant-r-1);
   --instant-bottom: var(--instant-r-1);
-  --instant-fontSize: var(--instant-fontSizeH2);
-  --instant-lineHeight: var(--instant-lineHeightH2);
+  --instant-fontSize: var(--instant-h2-font-size);
+  --instant-lineHeight: var(--instant-h2-line-height);
 }
 
 h1,
@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-  font-size: var(--instant-fontSizeH3);
+  font-size: var(--instant-h3-font-size);
 }
 
 h3,
@@ -39,7 +39,7 @@ h5,
 h6 {
   --instant-top: var(--instant-r-1);
   --instant-bottom: 0;
-  --instant-fontSize: var(--instant-fontSizeBase);
+  --instant-fontSize: var(--instant-base-font-size);
 
   margin-top: calc((var(--instant-top) - var(--instant-fontSize)) + var(--instant-top));
   margin-bottom: var(--instant-r-1);
@@ -48,8 +48,8 @@ h6 {
 h4,
 h5,
 h6 {
-  font-size: var(--instant-fontSizeBase);
-  line-height: var(--instant-lineHeightBase);
+  font-size: var(--instant-base-font-size);
+  line-height: var(--instant-base-line-height);
 }
 
 h4 {

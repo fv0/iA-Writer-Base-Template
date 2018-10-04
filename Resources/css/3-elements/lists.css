@@ -1,6 +1,6 @@
 ul,
 ol {
-  padding-left: var(--instant-indentationList);
+  padding-left: var(--instant-list-indentation);
 }
 
 ul {
@@ -8,9 +8,9 @@ ul {
 }
 
 ul li:before {
-  content: var(--instant-unorderedListSymbol);
+  content: var(--instant-symbol-list);
   float: left;
-  margin-left: calc(var(--instant-fontSizeBase) * -1);
+  margin-left: calc(var(--instant-base-font-size) * -1);
 }
 
 ul li:after {

@@ -29,7 +29,7 @@ ul .task-list-item:before {
   height: var(--instant-size); /* Same as width */
   border: none; /* Otherwise iPhone draws a border */
   margin: 0;
-  font-size: var(--instant-fontSizeBase); /* Required to overwrite user agent styles, set to same as p */
+  font-size: var(--instant-base-font-size); /* Required to overwrite user agent styles, set to same as p */
   background-image: url('../../images/box.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%; /* x = bottom right, y = vertically centered

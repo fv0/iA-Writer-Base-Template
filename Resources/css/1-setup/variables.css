@@ -2,50 +2,50 @@
   /*————————————————————————————————————————————————————————————————————————————
     Fonts
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-fontText: "IBM Plex Sans", "Keyboard", sans-serif;
-  --instant-fontMonospace: "IBM Plex Mono", "Keyboard", monospace;
+  --instant-text-font: "IBM Plex Sans", "Keyboard", sans-serif;
+  --instant-monospace-font: "IBM Plex Mono", "Keyboard", monospace;
 
   /*————————————————————————————————————————————————————————————————————————————
     Colors
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-colorText: hsl(0, 0%, 0%);
-  --instant-colorLink: var(--instant-colorText);
-  --instant-colorBackground: hsl(0, 0%, 98%);
-  --instant-colorBackgroundCode: hsl(0, 0%, 92%);
-  --instant-colorBorder: hsl(0, 0%, 86%);
+  --instant-text-color: hsl(0, 0%, 0%);
+  --instant-link-color: var(--instant-text-color);
+  --instant-background-color: hsl(0, 0%, 98%);
+  --instant-code-background-color: hsl(0, 0%, 92%);
+  --instant-border-color: hsl(0, 0%, 86%);
 
   /*————————————————————————————————————————————————————————————————————————————
     Styling
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-styleLink: underline;
-  --instant-unorderedListSymbol: "•";
+  --instant-link-style: underline;
+  --instant-symbol-list: "•";
 
   /*————————————————————————————————————————————————————————————————————————————
     Typography
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-typoScale: 1.3;
-  --instant-typoScaleH1: var(--instant-typoScale) * var(--instant-typoScale) * var(--instant-typoScale);
-  --instant-typoScaleH2: var(--instant-typoScale) * var(--instant-typoScale);
-  --instant-typoScaleH3: var(--instant-typoScale);
+  --instant-typo-scale: 1.3;
+  --instant-h1-typo-scale: var(--instant-typo-scale) * var(--instant-typo-scale) * var(--instant-typo-scale);
+  --instant-h2-typo-scale: var(--instant-typo-scale) * var(--instant-typo-scale);
+  --instant-h3-typo-scale: var(--instant-typo-scale);
 
-  --instant-fontSizeBase: 1rem;
-  --instant-fontSizeH1: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH1));
-  --instant-fontSizeH2: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH2));
-  --instant-fontSizeH3: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH3));
-  --instant-fontSizeSmall: calc(var(--instant-fontSizeBase) / 1.15);
+  --instant-base-font-size: 1rem;
+  --instant-h1-font-size: calc(var(--instant-base-font-size) * var(--instant-h1-typo-scale));
+  --instant-h2-font-size: calc(var(--instant-base-font-size) * var(--instant-h2-typo-scale));
+  --instant-h3-font-size: calc(var(--instant-base-font-size) * var(--instant-h3-typo-scale));
+  --instant-small-font-size: calc(var(--instant-base-font-size) / 1.15);
 
-  --instant-lineHeightBase: 1.5;
-  --instant-lineHeightH1: calc(var(--instant-lineHeightBase) * (var(--instant-lineHeightBase) / 2));
-  --instant-lineHeightH2: calc(var(--instant-lineHeightBase) * (var(--instant-lineHeightBase) / 2));
+  --instant-base-line-height: 1.5;
+  --instant-h1-line-height: calc(var(--instant-base-line-height) * (var(--instant-base-line-height) / 2));
+  --instant-h2-line-height: calc(var(--instant-base-line-height) * (var(--instant-base-line-height) / 2));
 
-  --instant-fontWeightHeading: 700;
+  --instant-heading-font-weight: 700;
 
   /*————————————————————————————————————————————————————————————————————————————
     Layout
   ————————————————————————————————————————————————————————————————————————————*/
 
   /* Establish vertical rhythm */
-  --instant-rhythm: var(--instant-fontSizeBase) * var(--instant-lineHeightBase);
+  --instant-rhythm: var(--instant-base-font-size) * var(--instant-base-line-height);
 
   /* Baseline margins */
   --instant-r-eigth:          calc(0.125 * var(--instant-rhythm));
@@ -63,7 +63,7 @@
   --instant-r-9:              calc(9 * var(--instant-rhythm));
   --instant-r-10:             calc(10 * var(--instant-rhythm));
 
-  --instant-paddingBody: var(--instant-r-half);
+  --instant-body-padding: var(--instant-r-half);
 
   /*
     LINE LENGTHS
@@ -73,16 +73,16 @@
     72 characters: ~560px
     80 characters: ~636px
   */
-  --instant-lineLengthBody: 560px;
+  --instant-body-line-length: 560px;
 
-  --instant-indentationParagraph: var(--instant-r-1);
-  --instant-indentationList: var(--instant-r-1);
+  --instant-paragraph-indentation: var(--instant-r-1);
+  --instant-list-indentation: var(--instant-r-1);
 
   /* Relative sizing helpers */
-  --instant-1px: calc(1 / 16 * var(--instant-fontSizeBase));
-  --instant-2px: calc(2 / 16 * var(--instant-fontSizeBase));
-  --instant-3px: calc(3 / 16 * var(--instant-fontSizeBase));
-  --instant-4px: calc(4 / 16 * var(--instant-fontSizeBase));
-  --instant-5px: calc(5 / 16 * var(--instant-fontSizeBase));
-  --instant-6px: calc(6 / 16 * var(--instant-fontSizeBase));
+  --instant-1px: calc(1 / 16 * var(--instant-base-font-size));
+  --instant-2px: calc(2 / 16 * var(--instant-base-font-size));
+  --instant-3px: calc(3 / 16 * var(--instant-base-font-size));
+  --instant-4px: calc(4 / 16 * var(--instant-base-font-size));
+  --instant-5px: calc(5 / 16 * var(--instant-base-font-size));
+  --instant-6px: calc(6 / 16 * var(--instant-base-font-size));
 }

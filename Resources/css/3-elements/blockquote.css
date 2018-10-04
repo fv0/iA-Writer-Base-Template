@@ -1,5 +1,5 @@
 blockquote {
-  border-left: var(--instant-3px) solid var(--instant-colorBorder);
+  border-left: var(--instant-3px) solid var(--instant-border-color);
   padding-left: var(--instant-r-half);
   margin-right: var(--instant-r-1);
   font-style: italic;

@@ -1,6 +1,6 @@
 .footnotes {
   page-break-before: avoid;
-  font-size: var(--instant-fontSizeSmall);
+  font-size: var(--instant-small-font-size);
 }
 
 .footnotes hr {

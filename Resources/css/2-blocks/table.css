@@ -1,17 +1,17 @@
 table {
-  font-size: var(--instant-fontSizeSmall);
+  font-size: var(--instant-small-font-size);
   border-collapse: collapse;
-  border: var(--instant-1px) solid var(--instant-colorBorder);
+  border: var(--instant-1px) solid var(--instant-border-color);
   width: 100%;
 }
 
 thead {
-  border-bottom: var(--instant-3px) solid var(--instant-colorBorder);
+  border-bottom: var(--instant-3px) solid var(--instant-border-color);
 }
 
 /* Stripe rows for better left-to-right scanability. */
 tbody tr:nth-child(odd) {
-  background-color: var(--instant-colorBackgroundCode);
+  background-color: var(--instant-code-background-color);
 }
 
 td,
@@ -21,7 +21,7 @@ th {
 }
 
 :matches(td, th):not(:last-child) {
-  border-right: var(--instant-1px) solid var(--instant-colorBorder);
+  border-right: var(--instant-1px) solid var(--instant-border-color);
 }
 
 /*————————————————————————————————————————————————————————————————————————————
@@ -36,10 +36,10 @@ table .tooltip {
 
 table .tooltip:after {
   content: attr(id);
-  font-size: var(--instant-fontSizeSmall);
+  font-size: var(--instant-small-font-size);
   font-weight: bold;
-  background: var(--instant-colorBackground);
-  border: var(--instant-1px) solid var(--instant-colorBorder);
+  background: var(--instant-background-color);
+  border: var(--instant-1px) solid var(--instant-border-color);
   border-bottom-width: var(--instant-2px);
   position: absolute;
   top: var(--instant-r-quarter);

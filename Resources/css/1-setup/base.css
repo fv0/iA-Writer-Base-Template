@@ -1,10 +1,10 @@
 html {
   box-sizing: border-box;
-  font-family: var(--instant-fontText);
+  font-family: var(--instant-text-font);
   font-size: 100%;
-  line-height: var(--instant-lineHeightBase);
-  color: var(--instant-colorText);
-  background-color: var(--instant-colorBackground);
+  line-height: var(--instant-base-line-height);
+  color: var(--instant-text-color);
+  background-color: var(--instant-background-color);
 }
 
 *,
@@ -15,8 +15,8 @@ html {
 
 a {
   text-decoration-skip: ink;
-  text-decoration: var(--instant-styleLink);
-  color: var(--instant-colorLink);
+  text-decoration: var(--instant-link-style);
+  color: var(--instant-link-color);
 }
 
 a:hover {
@@ -42,5 +42,5 @@ table {
 /* Indent the first line of sequential paragraphs, via the “Indent Paragraph” setting */
 .indent-paragraphs p + p {
   margin-top: 0;
-  text-indent: var(--instant-indentationParagraph);
+  text-indent: var(--instant-paragraph-indentation);
 }
