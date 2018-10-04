@@ -2,68 +2,68 @@
   /*————————————————————————————————————————————————————————————————————————————
     Fonts
   ————————————————————————————————————————————————————————————————————————————*/
-  --fontText: "IBM Plex Sans", "Keyboard", sans-serif;
-  --fontMonospace: "IBM Plex Mono", "Keyboard", monospace;
+  --instant-fontText: "IBM Plex Sans", "Keyboard", sans-serif;
+  --instant-fontMonospace: "IBM Plex Mono", "Keyboard", monospace;
 
   /*————————————————————————————————————————————————————————————————————————————
     Colors
   ————————————————————————————————————————————————————————————————————————————*/
-  --colorText: hsl(0, 0%, 0%);
-  --colorLink: var(--colorText);
-  --colorBackground: hsl(0, 0%, 98%);
-  --colorBackgroundCode: hsl(0, 0%, 92%);
-  --colorBorder: hsl(0, 0%, 86%);
+  --instant-colorText: hsl(0, 0%, 0%);
+  --instant-colorLink: var(--instant-colorText);
+  --instant-colorBackground: hsl(0, 0%, 98%);
+  --instant-colorBackgroundCode: hsl(0, 0%, 92%);
+  --instant-colorBorder: hsl(0, 0%, 86%);
 
   /*————————————————————————————————————————————————————————————————————————————
     Styling
   ————————————————————————————————————————————————————————————————————————————*/
-  --styleLink: underline;
-  --unorderedListSymbol: "•";
+  --instant-styleLink: underline;
+  --instant-unorderedListSymbol: "•";
 
   /*————————————————————————————————————————————————————————————————————————————
     Typography
   ————————————————————————————————————————————————————————————————————————————*/
-  --typoScale: 1.3;
-  --typoScaleH1: var(--typoScale) * var(--typoScale) * var(--typoScale);
-  --typoScaleH2: var(--typoScale) * var(--typoScale);
-  --typoScaleH3: var(--typoScale);
+  --instant-typoScale: 1.3;
+  --instant-typoScaleH1: var(--instant-typoScale) * var(--instant-typoScale) * var(--instant-typoScale);
+  --instant-typoScaleH2: var(--instant-typoScale) * var(--instant-typoScale);
+  --instant-typoScaleH3: var(--instant-typoScale);
 
-  --fontSizeBase: 1rem;
-  --fontSizeH1: calc(var(--fontSizeBase) * var(--typoScaleH1));
-  --fontSizeH2: calc(var(--fontSizeBase) * var(--typoScaleH2));
-  --fontSizeH3: calc(var(--fontSizeBase) * var(--typoScaleH3));
-  --fontSizeSmall: calc(var(--fontSizeBase) / 1.15);
+  --instant-fontSizeBase: 1rem;
+  --instant-fontSizeH1: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH1));
+  --instant-fontSizeH2: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH2));
+  --instant-fontSizeH3: calc(var(--instant-fontSizeBase) * var(--instant-typoScaleH3));
+  --instant-fontSizeSmall: calc(var(--instant-fontSizeBase) / 1.15);
 
-  --lineHeightBase: 1.5;
-  --lineHeightH1: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
-  --lineHeightH2: calc(var(--lineHeightBase) * (var(--lineHeightBase) / 2));
+  --instant-lineHeightBase: 1.5;
+  --instant-lineHeightH1: calc(var(--instant-lineHeightBase) * (var(--instant-lineHeightBase) / 2));
+  --instant-lineHeightH2: calc(var(--instant-lineHeightBase) * (var(--instant-lineHeightBase) / 2));
 
-  --fontWeightHeading: 700;
+  --instant-fontWeightHeading: 700;
 
   /*————————————————————————————————————————————————————————————————————————————
     Layout
   ————————————————————————————————————————————————————————————————————————————*/
 
   /* Establish vertical rhythm */
-  --rhythm: var(--fontSizeBase) * var(--lineHeightBase);
+  --instant-rhythm: var(--instant-fontSizeBase) * var(--instant-lineHeightBase);
 
   /* Baseline margins */
-  --r-eigth:          calc(0.125 * var(--rhythm));
-  --r-quarter:        calc(0.25 * var(--rhythm));
-  --r-half:           calc(0.5 * var(--rhythm));
-  --r-three-quarters: calc(0.75 * var(--rhythm));
-  --r-1:              calc(1 * var(--rhythm));
-  --r-2:              calc(2 * var(--rhythm));
-  --r-3:              calc(3 * var(--rhythm));
-  --r-4:              calc(4 * var(--rhythm));
-  --r-5:              calc(5 * var(--rhythm));
-  --r-6:              calc(6 * var(--rhythm));
-  --r-7:              calc(7 * var(--rhythm));
-  --r-8:              calc(8 * var(--rhythm));
-  --r-9:              calc(9 * var(--rhythm));
-  --r-10:             calc(10 * var(--rhythm));
+  --instant-r-eigth:          calc(0.125 * var(--instant-rhythm));
+  --instant-r-quarter:        calc(0.25 * var(--instant-rhythm));
+  --instant-r-half:           calc(0.5 * var(--instant-rhythm));
+  --instant-r-three-quarters: calc(0.75 * var(--instant-rhythm));
+  --instant-r-1:              calc(1 * var(--instant-rhythm));
+  --instant-r-2:              calc(2 * var(--instant-rhythm));
+  --instant-r-3:              calc(3 * var(--instant-rhythm));
+  --instant-r-4:              calc(4 * var(--instant-rhythm));
+  --instant-r-5:              calc(5 * var(--instant-rhythm));
+  --instant-r-6:              calc(6 * var(--instant-rhythm));
+  --instant-r-7:              calc(7 * var(--instant-rhythm));
+  --instant-r-8:              calc(8 * var(--instant-rhythm));
+  --instant-r-9:              calc(9 * var(--instant-rhythm));
+  --instant-r-10:             calc(10 * var(--instant-rhythm));
 
-  --paddingBody: var(--r-half);
+  --instant-paddingBody: var(--instant-r-half);
 
   /*
     LINE LENGTHS
@@ -73,16 +73,16 @@
     72 characters: ~560px
     80 characters: ~636px
   */
-  --lineLengthBody: 560px;
+  --instant-lineLengthBody: 560px;
 
-  --indentationParagraph: var(--r-1);
-  --indentationList: var(--r-1);
+  --instant-indentationParagraph: var(--instant-r-1);
+  --instant-indentationList: var(--instant-r-1);
 
   /* Relative sizing helpers */
-  --1px: calc(1 / 16 * var(--fontSizeBase));
-  --2px: calc(2 / 16 * var(--fontSizeBase));
-  --3px: calc(3 / 16 * var(--fontSizeBase));
-  --4px: calc(4 / 16 * var(--fontSizeBase));
-  --5px: calc(5 / 16 * var(--fontSizeBase));
-  --6px: calc(6 / 16 * var(--fontSizeBase));
+  --instant-1px: calc(1 / 16 * var(--instant-fontSizeBase));
+  --instant-2px: calc(2 / 16 * var(--instant-fontSizeBase));
+  --instant-3px: calc(3 / 16 * var(--instant-fontSizeBase));
+  --instant-4px: calc(4 / 16 * var(--instant-fontSizeBase));
+  --instant-5px: calc(5 / 16 * var(--instant-fontSizeBase));
+  --instant-6px: calc(6 / 16 * var(--instant-fontSizeBase));
 }

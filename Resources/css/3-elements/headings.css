@@ -4,52 +4,52 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fontWeightHeading);
+  font-weight: var(--instant-fontWeightHeading);
 }
 
 h1 {
-  --top: var(--r-2);
-  --bottom: var(--r-1);
-  --fontSize: var(--fontSizeH1);
-  --lineHeight: var(--lineHeightH1);
+  --instant-top: var(--instant-r-2);
+  --instant-bottom: var(--instant-r-1);
+  --instant-fontSize: var(--instant-fontSizeH1);
+  --instant-lineHeight: var(--instant-lineHeightH1);
 }
 
 h2 {
-  --top: var(--r-1);
-  --bottom: var(--r-1);
-  --fontSize: var(--fontSizeH2);
-  --lineHeight: var(--lineHeightH2);
+  --instant-top: var(--instant-r-1);
+  --instant-bottom: var(--instant-r-1);
+  --instant-fontSize: var(--instant-fontSizeH2);
+  --instant-lineHeight: var(--instant-lineHeightH2);
 }
 
 h1,
 h2 {
-  font-size: var(--fontSize);
-  line-height: var(--lineHeight);
-  margin-top: calc((var(--top) - var(--fontSize)) + var(--top));
-  margin-bottom: calc((var(--bottom) - var(--fontSize)) + var(--bottom));
+  font-size: var(--instant-fontSize);
+  line-height: var(--instant-lineHeight);
+  margin-top: calc((var(--instant-top) - var(--instant-fontSize)) + var(--instant-top));
+  margin-bottom: calc((var(--instant-bottom) - var(--instant-fontSize)) + var(--instant-bottom));
 }
 
 h3 {
-  font-size: var(--fontSizeH3);
+  font-size: var(--instant-fontSizeH3);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  --top: var(--r-1);
-  --bottom: 0;
-  --fontSize: var(--fontSizeBase);
+  --instant-top: var(--instant-r-1);
+  --instant-bottom: 0;
+  --instant-fontSize: var(--instant-fontSizeBase);
 
-  margin-top: calc((var(--top) - var(--fontSize)) + var(--top));
-  margin-bottom: var(--r-1);
+  margin-top: calc((var(--instant-top) - var(--instant-fontSize)) + var(--instant-top));
+  margin-bottom: var(--instant-r-1);
 }
 
 h4,
 h5,
 h6 {
-  font-size: var(--fontSizeBase);
-  line-height: var(--lineHeightBase);
+  font-size: var(--instant-fontSizeBase);
+  line-height: var(--instant-lineHeightBase);
 }
 
 h4 {
@@ -63,7 +63,7 @@ h5 {
 /* Inline with following paragraphs */
 h6 {
   display: inline-block;
-  margin: var(--r-1) var(--r-quarter) 0 0;
+  margin: var(--instant-r-1) var(--instant-r-quarter) 0 0;
 }
 
 h6 + p {
@@ -78,7 +78,7 @@ h1 + h1,
 h1 + h2,
 h2 + h1,
 h2 + h2 {
-  --marginTop: var(--r-1);
+  --instant-marginTop: var(--instant-r-1);
 }
 
 :matches(h1, h2, h3, h4, h5, h6) + :matches(h3, h4, h5, h6) {

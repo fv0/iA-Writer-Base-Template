@@ -1,27 +1,27 @@
 table {
-  font-size: var(--fontSizeSmall);
+  font-size: var(--instant-fontSizeSmall);
   border-collapse: collapse;
-  border: var(--1px) solid var(--colorBorder);
+  border: var(--instant-1px) solid var(--instant-colorBorder);
   width: 100%;
 }
 
 thead {
-  border-bottom: var(--3px) solid var(--colorBorder);
+  border-bottom: var(--instant-3px) solid var(--instant-colorBorder);
 }
 
 /* Stripe rows for better left-to-right scanability. */
 tbody tr:nth-child(odd) {
-  background-color: var(--colorBackgroundCode);
+  background-color: var(--instant-colorBackgroundCode);
 }
 
 td,
 th {
-  padding: var(--r-quarter);
+  padding: var(--instant-r-quarter);
   vertical-align: top;
 }
 
 :matches(td, th):not(:last-child) {
-  border-right: var(--1px) solid var(--colorBorder);
+  border-right: var(--instant-1px) solid var(--instant-colorBorder);
 }
 
 /*————————————————————————————————————————————————————————————————————————————
@@ -36,15 +36,15 @@ table .tooltip {
 
 table .tooltip:after {
   content: attr(id);
-  font-size: var(--fontSizeSmall);
+  font-size: var(--instant-fontSizeSmall);
   font-weight: bold;
-  background: var(--colorBackground);
-  border: var(--1px) solid var(--colorBorder);
-  border-bottom-width: var(--2px);
+  background: var(--instant-colorBackground);
+  border: var(--instant-1px) solid var(--instant-colorBorder);
+  border-bottom-width: var(--instant-2px);
   position: absolute;
-  top: var(--r-quarter);
-  right: var(--r-quarter);
-  padding: 0 var(--4px);
+  top: var(--instant-r-quarter);
+  right: var(--instant-r-quarter);
+  padding: 0 var(--instant-4px);
   transform: translateX(4px); /* [1] */
   z-index: 1;
   opacity: 0;

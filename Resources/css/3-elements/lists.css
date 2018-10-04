@@ -1,6 +1,6 @@
 ul,
 ol {
-  padding-left: var(--indentationList);
+  padding-left: var(--instant-indentationList);
 }
 
 ul {
@@ -8,9 +8,9 @@ ul {
 }
 
 ul li:before {
-  content: var(--unorderedListSymbol);
+  content: var(--instant-unorderedListSymbol);
   float: left;
-  margin-left: calc(var(--fontSizeBase) * -1);
+  margin-left: calc(var(--instant-fontSizeBase) * -1);
 }
 
 ul li:after {
@@ -22,7 +22,7 @@ ul li:after {
 
 /* Decrease vertical margin in lists */
 li :matches(p, pre, figure, img) {
-  margin-top: var(--r-half);
+  margin-top: var(--instant-r-half);
 }
 
 li :first-child {

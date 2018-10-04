@@ -1,7 +1,7 @@
 body {
-  max-width: var(--lineLengthBody);
+  max-width: var(--instant-lineLengthBody);
   margin: 0 auto;
-  padding: 0 var(--paddingBody);
+  padding: 0 var(--instant-paddingBody);
   word-wrap: break-word;
   font-variant-ligatures: normal;
   -webkit-font-kerning: normal;

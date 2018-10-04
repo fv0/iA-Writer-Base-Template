@@ -20,16 +20,16 @@ ul .task-list-item:before {
 }
 
 .task-list-item-checkbox {
-  --size: var(--r-1);
+  --instant-size: var(--instant-r-1);
 
   position: absolute;
   top: 0;
-  left: calc(var(--r-1) * -1);
-  width: var(--size); /* Same as p line-height (changing width/height affects svg size) */
-  height: var(--size); /* Same as width */
+  left: calc(var(--instant-r-1) * -1);
+  width: var(--instant-size); /* Same as p line-height (changing width/height affects svg size) */
+  height: var(--instant-size); /* Same as width */
   border: none; /* Otherwise iPhone draws a border */
   margin: 0;
-  font-size: var(--fontSizeBase); /* Required to overwrite user agent styles, set to same as p */
+  font-size: var(--instant-fontSizeBase); /* Required to overwrite user agent styles, set to same as p */
   background-image: url('../../images/box.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%; /* x = bottom right, y = vertically centered

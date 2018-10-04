@@ -71,8 +71,8 @@
 
 .header,
 .footer {
-  margin-top: var(--r-2);
-  margin-bottom: var(--r-2);
+  margin-top: var(--instant-r-2);
+  margin-bottom: var(--instant-r-2);
   text-align: center;
 }
 

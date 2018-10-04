@@ -1,11 +1,11 @@
 .footnotes {
   page-break-before: avoid;
-  font-size: var(--fontSizeSmall);
+  font-size: var(--instant-fontSizeSmall);
 }
 
 .footnotes hr {
   page-break-after: avoid;
-  margin-bottom: calc(var(--r-half) * -1);
+  margin-bottom: calc(var(--instant-r-half) * -1);
 }
 
 /* Remove underline on .reversefootnote arrow for iOS, as it’s turned into an emoji */
