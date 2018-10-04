@@ -23,21 +23,23 @@
   /*————————————————————————————————————————————————————————————————————————————
     Typography
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-typo-scale: 1.3;
-  --instant-h1-typo-scale: var(--instant-typo-scale) * var(--instant-typo-scale) * var(--instant-typo-scale);
-  --instant-h2-typo-scale: var(--instant-typo-scale) * var(--instant-typo-scale);
-  --instant-h3-typo-scale: var(--instant-typo-scale);
+  /* Define font size multipliers… */
+  --instant-h1-font-size-multiplier: 2.2;
+  --instant-h2-font-size-multiplier: 1.7;
+  --instant-h3-font-size-multiplier: 1.3;
 
-  --instant-base-font-size: 1rem;
-  --instant-h1-font-size: calc(var(--instant-base-font-size) * var(--instant-h1-typo-scale));
-  --instant-h2-font-size: calc(var(--instant-base-font-size) * var(--instant-h2-typo-scale));
-  --instant-h3-font-size: calc(var(--instant-base-font-size) * var(--instant-h3-typo-scale));
-  --instant-small-font-size: calc(var(--instant-base-font-size) / 1.15);
+  /* …and apply them. */
+  --instant-font-size: 1rem;
+  --instant-h1-font-size: calc(var(--instant-font-size) * var(--instant-h1-font-size-multiplier));
+  --instant-h2-font-size: calc(var(--instant-font-size) * var(--instant-h2-font-size-multiplier));
+  --instant-h3-font-size: calc(var(--instant-font-size) * var(--instant-h3-font-size-multiplier));
+  --instant-small-font-size: calc(var(--instant-font-size) / 1.15);
 
-  --instant-base-line-height: 1.5;
-  --instant-h1-line-height: calc(var(--instant-base-line-height) * (var(--instant-base-line-height) / 2));
-  --instant-h2-line-height: calc(var(--instant-base-line-height) * (var(--instant-base-line-height) / 2));
+  /* Line heights */
+  --instant-line-height: 1.5;
+  --instant-heading-line-height: calc(var(--instant-line-height) * (var(--instant-line-height) / 2));
 
+  /* Font weights */
   --instant-heading-font-weight: 700;
 
   /*————————————————————————————————————————————————————————————————————————————
@@ -45,7 +47,7 @@
   ————————————————————————————————————————————————————————————————————————————*/
 
   /* Establish vertical rhythm */
-  --instant-rhythm: var(--instant-base-font-size) * var(--instant-base-line-height);
+  --instant-rhythm: var(--instant-font-size) * var(--instant-line-height);
 
   /* Baseline margins */
   --instant-r-eigth:          calc(0.125 * var(--instant-rhythm));
@@ -79,10 +81,10 @@
   --instant-list-indentation: var(--instant-r-1);
 
   /* Relative sizing helpers */
-  --instant-1px: calc(1 / 16 * var(--instant-base-font-size));
-  --instant-2px: calc(2 / 16 * var(--instant-base-font-size));
-  --instant-3px: calc(3 / 16 * var(--instant-base-font-size));
-  --instant-4px: calc(4 / 16 * var(--instant-base-font-size));
-  --instant-5px: calc(5 / 16 * var(--instant-base-font-size));
-  --instant-6px: calc(6 / 16 * var(--instant-base-font-size));
+  --instant-1px: calc(1 / 16 * var(--instant-font-size));
+  --instant-2px: calc(2 / 16 * var(--instant-font-size));
+  --instant-3px: calc(3 / 16 * var(--instant-font-size));
+  --instant-4px: calc(4 / 16 * var(--instant-font-size));
+  --instant-5px: calc(5 / 16 * var(--instant-font-size));
+  --instant-6px: calc(6 / 16 * var(--instant-font-size));
 }

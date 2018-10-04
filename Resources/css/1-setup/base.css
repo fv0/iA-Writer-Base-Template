@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-family: var(--instant-text-font);
   font-size: 100%;
-  line-height: var(--instant-base-line-height);
+  line-height: var(--instant-line-height);
   color: var(--instant-text-color);
   background-color: var(--instant-background-color);
 }
