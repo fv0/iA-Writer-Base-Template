@@ -2,8 +2,8 @@
   /*————————————————————————————————————————————————————————————————————————————
     Fonts
   ————————————————————————————————————————————————————————————————————————————*/
-  --instant-text-font: "IBM Plex Sans", "Keyboard", sans-serif;
-  --instant-monospace-font: "IBM Plex Mono", "Keyboard", monospace;
+  --instant-text-font: "IBM Plex Sans";
+  --instant-monospace-font: "IBM Plex Mono";
 
   /*————————————————————————————————————————————————————————————————————————————
     Colors

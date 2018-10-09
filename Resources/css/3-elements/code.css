@@ -2,7 +2,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--instant-monospace-font);
+  font-family: var(--instant-monospace-font), "Keyboard", monospace;
   font-size: var(--instant-small-font-size);
   padding: var(--instant-2px) var(--instant-6px);
   white-space: pre-wrap;
